@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphael Guerra - IT Consultant | Deloitte</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Gradio Web Component (if you use a Gradio chatbot) -->
+    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.34.2/gradio.js"></script>
+    
+    <!-- Multi-language functionality -->
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/language-switcher.js"></script>
+    
+
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f; /* A dark, professional navy blue */
+            color: #e6f1ff;
+        }
+        .gradient-text {
+            background: -webkit-linear-gradient(45deg, #66ff99, #00cc66);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-effect {
+            background: rgba(10, 25, 47, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 204, 102, 0.2);
+        }
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(0, 204, 102, 0.4), 0 0 5px rgba(102, 255, 153, 0.6);
+        }
+        .gradient-border {
+            border-radius: 0.75rem;
+            padding: 2px;
+            background: linear-gradient(45deg, rgba(0, 204, 102, 0.3), rgba(102, 255, 153, 0.3));
+            transition: all 0.3s ease;
+        }
+        .gradient-border > div {
+            background-color: #0a192f;
+            border-radius: 0.6rem;
+            padding: 2rem;
+        }
+        .gradient-border:hover {
+            background: linear-gradient(45deg, rgba(0, 204, 102, 0.6), rgba(102, 255, 153, 0.6));
+        }
+        
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tighter text-white">
+                Raphael Guerra<span class="gradient-text">.</span>
+            </h1>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <!-- Language Selector -->
+                <div class="flex space-x-2 text-sm text-slate-400 desktop-lang-selector">
+                    <a href="#" data-lang="en" class="font-bold text-white">EN</a>
+                    <span>/</span>
+                    <a href="#" data-lang="pt" class="hover:text-white transition-colors">PT</a>
+                    <span>/</span>
+                    <a href="#" data-lang="fr" class="hover:text-white transition-colors">FR</a>
+                    <span>/</span>
+                    <a href="#" data-lang="es" class="hover:text-white transition-colors">ES</a>
+                </div>
+                <div class="border-l border-slate-700 h-6"></div>
+                <!-- Navigation Links -->
+                <a href="#about" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-about">About</a>
+                <a href="#chatbot" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-ai-assistant">AI Assistant</a>
+                <a href="#experience" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-experience">Experience</a>
+                <a href="#projects" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-projects">Projects</a>
+                <a href="#contact" class="bg-green-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition-colors glow-effect" data-translate="nav-contact">
+                    Contact
+                </a>
+            </nav>
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect">
+            <a href="#about" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-about">About</a>
+            <a href="#chatbot" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-ai-assistant">AI Assistant</a>
+            <a href="#experience" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-experience">Experience</a>
+            <a href="#projects" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-projects">Projects</a>
+            <a href="#contact" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-contact">Contact</a>
+            <div class="border-t border-slate-700 my-2"></div>
+            <!-- Mobile Language Selector -->
+            <div class="flex justify-center space-x-4 py-2 text-slate-400 mobile-lang-selector">
+                <a href="#" data-lang="en" class="font-bold text-white">EN</a>
+                <a href="#" data-lang="pt" class="hover:text-white transition-colors">PT</a>
+                <a href="#" data-lang="fr" class="hover:text-white transition-colors">FR</a>
+                <a href="#" data-lang="es" class="hover:text-white transition-colors">ES</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section id="hero" class="min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
+            <div class="absolute inset-0" style="background-image: 
+                radial-gradient(circle at 20% 20%, rgba(0, 204, 102, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(102, 255, 153, 0.08) 0%, transparent 40%);"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-3xl">
+                    <h2 class="text-lg font-semibold text-green-400 tracking-wider mb-4" data-translate="hero-greeting">Hi, my name is</h2>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tighter mb-4">
+                        Raphael Guerra.
+                    </h1>
+                    <h3 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-400 tracking-tighter mb-6" data-translate="hero-subtitle">
+                        I build solutions for the digital age.
+                    </h3>
+                    <p class="max-w-xl text-xl text-slate-300 leading-relaxed mb-8">
+                        <span data-translate="hero-description">I'm a Consultant based in Ottawa, specializing in Oracle NetSuite ERP cloud solutions. I'm passionate about implementing tailored ERP systems to optimize workflows, solve complex challenges, and deliver measurable results for clients at</span> <span class="text-green-400 font-semibold">Deloitte</span>.
+                    </p>
+                    <a href="#projects" class="bg-transparent border-2 border-green-400 text-green-400 font-bold text-lg px-8 py-4 rounded-lg hover:bg-green-400 hover:text-slate-900 transition-all duration-300" data-translate="hero-cta">
+                        Check out my work!
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 2: AI Chatbot -->
+        <section id="chatbot" class="py-20 md:py-32 relative">
+            <div class="absolute inset-0" style="background-image: 
+                radial-gradient(circle at 15% 85%, rgba(0, 204, 102, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 85% 15%, rgba(102, 255, 153, 0.1) 0%, transparent 40%);"></div>
+        
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-2"><span class="gradient-text">01.</span> <span data-translate="ai-title">AI Assistant</span></h2>
+                    <div class="w-24 h-1 bg-green-500 mx-auto mb-4"></div>
+                    <p class="max-w-3xl mx-auto text-xl text-slate-300 leading-relaxed" data-translate="ai-description">
+                        Have questions about my experience or skills? Ask my AI-powered digital assistant, trained on my professional background.
+                    </p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="gradient-border">
+                        <div>
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg blur-xl"></div>
+                                <!-- PASTE YOUR CHATBOT EMBED CODE HERE -->
+                                <gradio-app src="https://phaelix-raphaelbot.hf.space" class="relative w-full h-96 min-h-[400px] rounded-lg border border-slate-700 bg-slate-900/50 backdrop-blur-sm"></gradio-app>
+                                
+                                <div class="absolute -top-2 -right-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                                    <span data-translate="ai-online">ONLINE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: About Me -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-white mb-2 text-center"><span class="gradient-text">02.</span> <span data-translate="about-title">About Me</span></h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto mb-12"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-3 text-slate-300 text-lg space-y-4">
+                        <p data-translate="about-paragraph-1">
+                           My journey is one of continuous growth and adaptation. Before moving to Canada, I spent a decade as a Hotel Manager in Brazil, where I honed my leadership, operational, and customer-focused skills. This foundation in business management gave me a unique perspective when I transitioned into technology.
+                        </p>
+                        <p data-translate="about-paragraph-2">
+                            In Canada, I started as a Database Administrator, mastering MS SQL Server before moving into SAP development. Now at Deloitte, I leverage this diverse background to bridge the gap between business needs and technical solutions, helping clients navigate their digital transformation journeys. Outside of work, I'm passionate about group fitness—a healthy body is the best hardware for running complex code!
+                        </p>
+                        <p data-translate="about-technologies">Here are a few technologies I've been working with recently:</p>
+                        <ul class="grid grid-cols-2 gap-2 mt-4">
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Oracle NetSuite</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>SAP Development</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>SQL Server</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Agile Methodologies</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Cloud Architecture</li>
+                             <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Frontend Web Dev</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="relative w-full max-w-xs mx-auto">
+                            <div class="absolute inset-0 bg-green-500 rounded-lg transform -rotate-6"></div>
+                            <img src="https://media.licdn.com/dms/image/v2/D4E03AQHGD3WKWKYLww/profile-displayphoto-shrink_800_800/B4EZb5NU__HQAg-/0/1747937743479?e=1758153600&v=beta&t=24g8PHncheR5e5nsUdsJSGCLj4oi501Px_ACAUeSSvk" alt="Raphael Guerra" class="relative w-full rounded-lg shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/400x400/0a192f/e6f1ff?text=Image+Not+Found';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Experience -->
+        <section id="experience" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl font-bold text-white mb-2 text-center"><span class="gradient-text">03.</span> <span data-translate="experience-title">Where I've Worked</span></h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto mb-12"></div>
+                
+                <div class="space-y-8">
+                    <div class="gradient-border">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1"><span data-translate="experience-deloitte-title">Consultant</span> <span class="text-green-400">@ Deloitte</span></h3>
+                            <p class="text-slate-400 mb-4" data-translate="experience-deloitte-period">October 2024 — Present</p>
+                            <ul class="space-y-3 text-slate-300">
+                               <li class="flex items-start"><svg class="w-4 h-4 mr-3 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg><span data-translate="experience-deloitte-bullet-1">Specializing in Oracle NetSuite ERP cloud solutions, implementing tailored systems to optimize workflows and solve complex challenges.</span></li>
+                               <li class="flex items-start"><svg class="w-4 h-4 mr-3 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg><span data-translate="experience-deloitte-bullet-2">Previously served as an SAP Developer, creating database-driven solutions to improve enterprise processes.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="gradient-border">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1"><span data-translate="experience-innovapost-title">SAP Developer & IT Ops</span> <span class="text-green-400">@ Innovapost</span></h3>
+                            <p class="text-slate-400 mb-4" data-translate="experience-innovapost-period">April 2022 — April 2024</p>
+                            <ul class="space-y-3 text-slate-300">
+                               <li class="flex items-start"><svg class="w-4 h-4 mr-3 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg><span data-translate="experience-innovapost-bullet-1">Served in multiple roles, including SAP Developer, IT Operations Specialist, and Frontend Web Developer.</span></li>
+                               <li class="flex items-start"><svg class="w-4 h-4 mr-3 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg><span data-translate="experience-innovapost-bullet-2">Enhanced data management and operational efficiency with Microsoft SQL Server and developed front-end web solutions.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="gradient-border">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1"><span data-translate="experience-vision-title">Manager</span> <span class="text-green-400">@ Vison Hotel</span></h3>
+                            <p class="text-slate-400 mb-4" data-translate="experience-vision-period">June 2008 — December 2017</p>
+                            <ul class="space-y-3 text-slate-300">
+                               <li class="flex items-start"><svg class="w-4 h-4 mr-3 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg><span data-translate="experience-vision-bullet-1">Managed hotel operations for nearly 10 years, developing strong leadership, operational expertise, and a customer-first approach.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 5: Featured Projects -->
+        <section id="projects" class="py-20 md:py-32">
+             <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-white mb-2 text-center"><span class="gradient-text">04.</span> <span data-translate="projects-title">Things I've Built</span></h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto mb-12"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project Card 1: Phaelix AI -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/Phaelix-AI-Website" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium">Code</span>
+                                        </a>
+                                        <a href="https://phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                            <span class="text-sm font-medium">Live</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-phaelix-title">Phaelix AI Website</h4>
+                                <p class="text-slate-400" data-translate="project-phaelix-description">A professional, modern website for an AI consultancy, demonstrating skills in creating strategic and ambitious online presences for businesses.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500">Tech Stack: HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Eco-Explorer Game -->
+                     <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/eco-explorer" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium">Code</span>
+                                        </a>
+                                        <a href="https://raphaelguerra.github.io/eco-explorer/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                            <span class="text-sm font-medium">Live</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-eco-explorer-title">Eco-Explorer Game</h4>
+                                <p class="text-slate-400" data-translate="project-eco-explorer-description">An educational simulation game where players become Lead Ecologists in Brazil's Itatiaia National Park, featuring AI and dynamic systems.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500">Tech Stack: JavaScript, HTML5, CSS</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3: Eco-Explorer Website -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/eco-explorer-website" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium">Code</span>
+                                        </a>
+                                        <a href="https://raphaelguerra.github.io/eco-explorer-website/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                            <span class="text-sm font-medium">Live</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-eco-website-title">Eco-Explorer Website</h4>
+                                <p class="text-slate-400" data-translate="project-eco-website-description">A companion website for the Eco-Explorer game, providing information, context, and a portal for players to learn more about the project.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500">Tech Stack: HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contact -->
+        <section id="contact" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center max-w-2xl">
+                <h2 class="text-2xl font-bold text-green-400 mb-2" data-translate="contact-subtitle">05. What's Next?</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-white mb-4" data-translate="contact-title">Get In Touch</h3>
+                <p class="text-lg text-slate-300 mb-8" data-translate="contact-description">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Whether you have a question or just want to say hi, my inbox is always open. I'll do my best to get back to you!
+                </p>
+                <a href="mailto:raphaelguerra88@gmail.com" class="bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-green-600 transition-colors inline-block" data-translate="contact-cta">
+                    Say Hello
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-transparent relative">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/RaphaelGuerra" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/guerraraphael" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition-colors">LinkedIn</a>
+            </div>
+            <p class="text-sm" data-translate="footer-designed">Designed & Built by Raphael Guerra</p>
+            <p class="text-xs text-slate-500 mt-2" data-translate="footer-inspired">Inspired by the work of Phaelix AI.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript functionality is now handled by external files -->
+
+
+</body>
+</html>
