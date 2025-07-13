@@ -23,7 +23,7 @@ const translations = {
         // About Section
         'about-title': 'About Me',
         'about-paragraph-1': 'My journey is one of continuous growth and adaptation. Before moving to Canada, I spent a decade as a Hotel Manager in Brazil, where I honed my leadership, operational, and customer-focused skills. This foundation in business management gave me a unique perspective when I transitioned into technology.',
-        'about-paragraph-2': 'In Canada, I started as a Database Administrator, mastering MS SQL Server before moving into SAP development. Now at Deloitte, I leverage this diverse background to bridge the gap between business needs and technical solutions, helping clients navigate their digital transformation journeys. Outside of work, I\'m passionate about group fitness—a healthy body is the best hardware for running complex code!',
+        'about-paragraph-2': 'In Canada, I started as a Database Administrator, mastering MS SQL Server before moving into SAP development. Now at Deloitte, I leverage this diverse background to bridge the gap between business needs and technical solutions, helping clients navigate their digital transformation journeys. My curiosity drives me to constantly explore and test new AI models, agents, and frameworks—I believe in staying at the forefront of emerging technologies to deliver innovative solutions.',
         'about-technologies': 'Here are a few technologies I\'ve been working with recently:',
         
         // Experience Section
@@ -51,6 +51,8 @@ const translations = {
         'project-eco-explorer-description': 'An educational simulation game where players become Lead Ecologists in Brazil\'s Itatiaia National Park, featuring AI and dynamic systems.',
         'project-eco-website-title': 'Eco-Explorer Website',
         'project-eco-website-description': 'A companion website for the Eco-Explorer game, providing information, context, and a portal for players to learn more about the project.',
+        'project-career-chatbot-title': 'Career Chatbot',
+        'project-career-chatbot-description': 'An AI-powered career guidance chatbot that helps users explore career paths, provides job search advice, and offers personalized career recommendations based on skills and interests.',
         'tech-stack': 'Tech Stack: HTML, CSS, JavaScript',
         
         // Contact Section
@@ -86,7 +88,7 @@ const translations = {
         // About Section
         'about-title': 'Sobre Mim',
         'about-paragraph-1': 'Minha jornada é uma de crescimento e adaptação contínuos. Antes de me mudar para o Canadá, passei uma década como Gerente de Hotel no Brasil, onde aprimorei minhas habilidades de liderança, operacionais e focadas no cliente. Essa base em gestão empresarial me deu uma perspectiva única quando transicionei para a tecnologia.',
-        'about-paragraph-2': 'No Canadá, comecei como Administrador de Banco de Dados, dominando MS SQL Server antes de migrar para desenvolvimento SAP. Agora na Deloitte, aproveito essa formação diversificada para fazer a ponte entre necessidades empresariais e soluções técnicas, ajudando clientes a navegar em suas jornadas de transformação digital. Fora do trabalho, sou apaixonado por fitness em grupo—um corpo saudável é o melhor hardware para executar código complexo!',
+        'about-paragraph-2': 'No Canadá, comecei como Administrador de Banco de Dados, dominando MS SQL Server antes de migrar para desenvolvimento SAP. Agora na Deloitte, aproveito essa formação diversificada para fazer a ponte entre necessidades empresariais e soluções técnicas, ajudando clientes a navegar em suas jornadas de transformação digital. Minha curiosidade me leva a constantemente explorar e testar novos modelos de IA, agentes e frameworks—acredito em estar na vanguarda das tecnologias emergentes para entregar soluções inovadoras.',
         'about-technologies': 'Aqui estão algumas tecnologias com as quais tenho trabalhado recentemente:',
         
         // Experience Section
@@ -114,6 +116,8 @@ const translations = {
         'project-eco-explorer-description': 'Um jogo de simulação educacional onde jogadores se tornam Ecologistas Líderes no Parque Nacional de Itatiaia, Brasil, com recursos de IA e sistemas dinâmicos.',
         'project-eco-website-title': 'Website Eco-Explorer',
         'project-eco-website-description': 'Um website companheiro para o jogo Eco-Explorer, fornecendo informações, contexto e um portal para que jogadores aprenderem mais sobre o projeto.',
+        'project-career-chatbot-title': 'Chatbot de Carreira',
+        'project-career-chatbot-description': 'Um chatbot de orientação de carreira alimentado por IA que ajuda usuários a explorar caminhos de carreira, fornece conselhos de busca de emprego e oferece recomendações de carreira personalizadas baseadas em habilidades e interesses.',
         'tech-stack': 'Stack Tecnológica: HTML, CSS, JavaScript',
         
         // Contact Section
@@ -149,7 +153,7 @@ const translations = {
         // About Section
         'about-title': 'À Propos de Moi',
         'about-paragraph-1': 'Mon parcours est celui d\'une croissance et d\'une adaptation continues. Avant de déménager au Canada, j\'ai passé une décennie comme Gestionnaire d\'Hôtel au Brésil, où j\'ai affiné mes compétences de leadership, opérationnelles et axées sur le client. Cette base en gestion d\'entreprise m\'a donné une perspective unique lors de ma transition vers la technologie.',
-        'about-paragraph-2': 'Au Canada, j\'ai commencé comme Administrateur de Base de Données, maîtrisant MS SQL Server avant de passer au développement SAP. Maintenant chez Deloitte, je tire parti de cette formation diversifiée pour combler le fossé entre les besoins commerciaux et les solutions techniques, aidant les clients à naviguer dans leurs parcours de transformation numérique. En dehors du travail, je suis passionné par le fitness en groupe—un corps sain est le meilleur matériel pour exécuter du code complexe !',
+        'about-paragraph-2': 'Au Canada, j\'ai commencé comme Administrateur de Base de Données, maîtrisant MS SQL Server avant de passer au développement SAP. Maintenant chez Deloitte, je tire parti de cette formation diversifiée pour combler le fossé entre les besoins commerciaux et les solutions techniques, aidant les clients à naviguer dans leurs parcours de transformation numérique. Ma curiosité me pousse à constamment explorer et tester de nouveaux modèles d\'IA, agents et frameworks—je crois en rester à l\'avant-garde des technologies émergentes pour livrer des solutions innovantes.',
         'about-technologies': 'Voici quelques technologies avec lesquelles j\'ai travaillé récemment :',
         
         // Experience Section
@@ -177,6 +181,8 @@ const translations = {
         'project-eco-explorer-description': 'Un jeu de simulation éducatif où les joueurs deviennent Écologistes Principaux dans le Parc National d\'Itatiaia, Brésil, avec des fonctionnalités d\'IA et des systèmes dynamiques.',
         'project-eco-website-title': 'Site Web Eco-Explorer',
         'project-eco-website-description': 'Un site web compagnon pour le jeu Eco-Explorer, fournissant des informations, du contexte et un portail pour que les joueurs en apprennent plus sur le projet.',
+        'project-career-chatbot-title': 'Chatbot de Carrière',
+        'project-career-chatbot-description': 'Un chatbot d\'orientation de carrière alimenté par l\'IA qui aide les utilisateurs à explorer des parcours de carrière, fournit des conseils de recherche d\'emploi et offre des recommandations de carrière personnalisées basées sur les compétences et les intérêts.',
         'tech-stack': 'Stack Technologique : HTML, CSS, JavaScript',
         
         // Contact Section
@@ -212,7 +218,7 @@ const translations = {
         // About Section
         'about-title': 'Acerca de Mí',
         'about-paragraph-1': 'Mi viaje es uno de crecimiento y adaptación continuos. Antes de mudarme a Canadá, pasé una década como Gerente de Hotel en Brasil, donde perfeccioné mis habilidades de liderazgo, operacionales y enfocadas en el cliente. Esta base en gestión empresarial me dio una perspectiva única cuando transicioné a la tecnología.',
-        'about-paragraph-2': 'En Canadá, comencé como Administrador de Base de Datos, dominando MS SQL Server antes de migrar al desarrollo SAP. Ahora en Deloitte, aprovecho esta formación diversificada para hacer el puente entre necesidades empresariales y soluciones técnicas, ayudando a clientes a navegar en sus viajes de transformación digital. Fuera del trabajo, soy apasionado por el fitness grupal—¡un cuerpo saludable es el mejor hardware para ejecutar código complejo!',
+        'about-paragraph-2': 'En Canadá, comencé como Administrador de Base de Datos, dominando MS SQL Server antes de migrar al desarrollo SAP. Ahora en Deloitte, aprovecho esta formación diversificada para hacer el puente entre necesidades empresariales y soluciones técnicas, ayudando a clientes a navegar en sus viajes de transformación digital. Mi curiosidad me lleva a constantemente explorar y probar nuevos modelos de IA, agentes y frameworks—creo en estar a la vanguardia de las tecnologías emergentes para entregar soluciones innovadoras.',
         'about-technologies': 'Aquí hay algunas tecnologías con las que he estado trabajando recientemente:',
         
         // Experience Section
@@ -240,6 +246,8 @@ const translations = {
         'project-eco-explorer-description': 'Un juego de simulación educacional donde jugadores se convierten en Ecólogos Líderes en el Parque Nacional de Itatiaia, Brasil, con características de IA y sistemas dinámicos.',
         'project-eco-website-title': 'Sitio Web Eco-Explorer',
         'project-eco-website-description': 'Un sitio web compañero para el juego Eco-Explorer, proporcionando información, contexto y un portal para que jugadores aprendan más sobre el proyecto.',
+        'project-career-chatbot-title': 'Chatbot de Carrera',
+        'project-career-chatbot-description': 'Un chatbot de orientación de carrera alimentado por IA que ayuda a usuarios a explorar caminos de carrera, proporciona consejos de búsqueda de empleo y ofrece recomendaciones de carrera personalizadas basadas en habilidades e intereses.',
         'tech-stack': 'Stack Tecnológica: HTML, CSS, JavaScript',
         
         // Contact Section
