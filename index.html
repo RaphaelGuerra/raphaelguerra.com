@@ -18,49 +18,13 @@
     <!-- Gradio Web Component (if you use a Gradio chatbot) -->
     <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.34.2/gradio.js"></script>
     
-    <!-- Multi-language functionality -->
-    <script src="assets/js/translations.js"></script>
+    <!-- Standardized i18n System -->
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/language-switcher.js"></script>
+    <script src="assets/js/main.js"></script>
     
-
-
     <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a192f; /* A dark, professional navy blue */
-            color: #e6f1ff;
-        }
-        .gradient-text {
-            background: -webkit-linear-gradient(45deg, #66ff99, #00cc66);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .glass-effect {
-            background: rgba(10, 25, 47, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 204, 102, 0.2);
-        }
-        .glow-effect {
-            box-shadow: 0 0 15px rgba(0, 204, 102, 0.4), 0 0 5px rgba(102, 255, 153, 0.6);
-        }
-        .gradient-border {
-            border-radius: 0.75rem;
-            padding: 2px;
-            background: linear-gradient(45deg, rgba(0, 204, 102, 0.3), rgba(102, 255, 153, 0.3));
-            transition: all 0.3s ease;
-        }
-        .gradient-border > div {
-            background-color: #0a192f;
-            border-radius: 0.6rem;
-            padding: 2rem;
-        }
-        .gradient-border:hover {
-            background: linear-gradient(45deg, rgba(0, 204, 102, 0.6), rgba(102, 255, 153, 0.6));
-        }
-        
-
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body class="antialiased">
 

@@ -1,103 +1,196 @@
-// Language switcher functionality for Raphael Guerra's website
+/**
+ * Unified Language Switcher Component
+ * Provides a consistent dropdown language switcher across all sites
+ */
 
-// Language switching functionality
-function switchLanguage(lang) {
-    // Update HTML lang attribute
-    document.documentElement.lang = lang;
-    
-    // Update all elements with data-translate attribute
-    const elements = document.querySelectorAll('[data-translate]');
-    elements.forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
+class LanguageSwitcher {
+    constructor() {
+        this.isInitialized = false;
+        this.dropdown = null;
+        this.button = null;
+    }
+
+    /**
+     * Initialize the language switcher
+     */
+    initialize() {
+        if (this.isInitialized) return;
+
+        // Wait for i18n to be ready
+        if (!window.i18n) {
+            setTimeout(() => this.initialize(), 100);
+            return;
         }
-    });
-    
-    // Update language selector active state
-    updateLanguageSelector(lang);
-    
-    // Save language preference
-    localStorage.setItem('preferred-language', lang);
-}
 
-function updateLanguageSelector(activeLang) {
-    // Update desktop language selector
-    const desktopLangLinks = document.querySelectorAll('.desktop-lang-selector a');
-    desktopLangLinks.forEach(link => {
-        const lang = link.getAttribute('data-lang');
-        if (lang === activeLang) {
-            link.classList.add('font-bold', 'text-white');
-            link.classList.remove('text-slate-400', 'hover:text-white');
-        } else {
-            link.classList.remove('font-bold', 'text-white');
-            link.classList.add('text-slate-400', 'hover:text-white');
-        }
-    });
-    
-    // Update mobile language selector
-    const mobileLangLinks = document.querySelectorAll('.mobile-lang-selector a');
-    mobileLangLinks.forEach(link => {
-        const lang = link.getAttribute('data-lang');
-        if (lang === activeLang) {
-            link.classList.add('font-bold', 'text-white');
-            link.classList.remove('text-slate-400', 'hover:text-white');
-        } else {
-            link.classList.remove('font-bold', 'text-white');
-            link.classList.add('text-slate-400', 'hover:text-white');
-        }
-    });
-}
+        this.createLanguageSwitcher();
+        this.bindEvents();
+        this.isInitialized = true;
+    }
 
-// Initialize language system
-function initializeLanguageSystem() {
-    // Get saved language preference or default to English
-    const savedLang = localStorage.getItem('preferred-language') || 'en';
-    switchLanguage(savedLang);
-    
-    // Add click event listeners to language selector links
-    const langLinks = document.querySelectorAll('[data-lang]');
-    langLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lang = this.getAttribute('data-lang');
-            switchLanguage(lang);
-        });
-    });
-}
-
-// Mobile menu functionality
-function initializeMobileMenu() {
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-
-    if (btn && menu) {
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+    /**
+     * Create the language switcher HTML
+     */
+    createLanguageSwitcher() {
+        // Find existing language selector elements to replace
+        const existingSelectors = document.querySelectorAll('.desktop-lang-selector, .mobile-lang-selector');
+        
+        existingSelectors.forEach(selector => {
+            const parent = selector.parentElement;
+            const newSwitcher = this.createSwitcherHTML();
+            
+            // Replace the old selector with the new one
+            parent.replaceChild(newSwitcher, selector);
         });
 
-        // Close menu when a link is clicked
-        const menuLinks = menu.getElementsByTagName('a');
-        for (let i = 0; i < menuLinks.length; i++) {
-            menuLinks[i].addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+        // If no existing selectors found, add to header
+        if (existingSelectors.length === 0) {
+            const header = document.querySelector('header nav');
+            if (header) {
+                const newSwitcher = this.createSwitcherHTML();
+                header.insertBefore(newSwitcher, header.firstChild);
+            }
         }
+    }
+
+    /**
+     * Create the language switcher HTML structure
+     */
+    createSwitcherHTML() {
+        const container = document.createElement('div');
+        container.className = 'language-switcher';
+        
+        const button = document.createElement('button');
+        button.className = 'language-btn';
+        button.id = 'language-btn';
+        button.innerHTML = `
+            <span id="current-lang">EN</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        `;
+
+        const dropdown = document.createElement('div');
+        dropdown.className = 'language-dropdown';
+        dropdown.id = 'language-dropdown';
+
+        // Add language options
+        const languages = window.i18n.getSupportedLanguages();
+        const languageNames = window.i18n.getLanguageNames();
+
+        languages.forEach(lang => {
+            const option = document.createElement('button');
+            option.className = 'language-option';
+            option.setAttribute('data-lang', lang);
+            option.innerHTML = languageNames[lang];
+            dropdown.appendChild(option);
+        });
+
+        container.appendChild(button);
+        container.appendChild(dropdown);
+
+        return container;
+    }
+
+    /**
+     * Bind event listeners
+     */
+    bindEvents() {
+        this.button = document.getElementById('language-btn');
+        this.dropdown = document.getElementById('language-dropdown');
+
+        if (!this.button || !this.dropdown) return;
+
+        // Toggle dropdown
+        this.button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleDropdown();
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            this.closeDropdown();
+        });
+
+        // Prevent dropdown from closing when clicking inside it
+        this.dropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        // Handle language selection
+        this.dropdown.addEventListener('click', (e) => {
+            if (e.target.classList.contains('language-option')) {
+                const selectedLang = e.target.getAttribute('data-lang');
+                this.changeLanguage(selectedLang);
+                this.closeDropdown();
+            }
+        });
+
+        // Close dropdown with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                this.closeDropdown();
+            }
+        });
+    }
+
+    /**
+     * Toggle dropdown visibility
+     */
+    toggleDropdown() {
+        this.dropdown.classList.toggle('show');
+    }
+
+    /**
+     * Close dropdown
+     */
+    closeDropdown() {
+        this.dropdown.classList.remove('show');
+    }
+
+    /**
+     * Change language
+     */
+    async changeLanguage(lang) {
+        if (window.i18n) {
+            await window.i18n.setLanguage(lang);
+        }
+    }
+
+    /**
+     * Update the switcher display
+     */
+    updateDisplay() {
+        if (!this.button) return;
+
+        const currentLang = window.i18n?.getCurrentLanguage() || 'en';
+        const currentLangSpan = this.button.querySelector('#current-lang');
+        
+        if (currentLangSpan) {
+            currentLangSpan.textContent = currentLang.toUpperCase();
+        }
+
+        // Update active state
+        const options = this.dropdown?.querySelectorAll('.language-option');
+        options?.forEach(option => {
+            const lang = option.getAttribute('data-lang');
+            if (lang === currentLang) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
     }
 }
 
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initializeLanguageSystem();
-    initializeMobileMenu();
+// Create global instance
+window.languageSwitcher = new LanguageSwitcher();
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    window.languageSwitcher.initialize();
 });
 
-// Export functions for potential use in other files
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        switchLanguage,
-        updateLanguageSelector,
-        initializeLanguageSystem,
-        initializeMobileMenu
-    };
-} 
+// Update display when i18n changes
+document.addEventListener('languageChanged', () => {
+    window.languageSwitcher.updateDisplay();
+}); 
