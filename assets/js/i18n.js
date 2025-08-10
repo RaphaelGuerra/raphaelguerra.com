@@ -20,17 +20,20 @@ class I18nManager {
      * Initialize the i18n system
      */
     async initialize() {
-        // Get saved language preference or detect browser language
+        // URL param should take precedence, then saved, then browser
+        const urlLang = new URLSearchParams(window.location.search).get('lang');
         const savedLang = localStorage.getItem('preferred-language');
         const browserLang = this.detectBrowserLanguage();
-        const initialLang = savedLang || browserLang;
+        const initialLang = (urlLang && this.supportedLanguages.includes(urlLang))
+            ? urlLang
+            : (savedLang || browserLang);
 
         // Load initial language
         await this.setLanguage(initialLang);
-        
+
         // Update URL with language parameter
         this.updateURL();
-        
+
         // Add hreflang tags for SEO
         this.addHreflangTags();
     }
@@ -94,9 +97,12 @@ class I18nManager {
         
         // Save preference
         localStorage.setItem('preferred-language', lang);
-        
+
         // Update URL
         this.updateURL();
+
+        // Dispatch a custom event so other components can react
+        document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
     }
 
     /**
@@ -119,6 +125,13 @@ class I18nManager {
             const translation = this.translations[this.currentLanguage]?.[key];
             
             if (translation) {
+                // Attribute translation support via data-translate-attr
+                const attr = element.getAttribute('data-translate-attr');
+                if (attr) {
+                    element.setAttribute(attr, translation);
+                    return;
+                }
+
                 // Handle different element types
                 if (element.tagName === 'INPUT' && element.type === 'placeholder') {
                     element.placeholder = translation;

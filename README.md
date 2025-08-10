@@ -11,35 +11,47 @@ The website supports four languages:
 - **Spanish (ES)** - Español
 
 ### Language Switching
-- Click on the language codes in the navigation (EN/PT/FR/ES)
-- Language preference is saved in localStorage
-- Automatic language detection and persistence
+- Use the dropdown selector in the header
+- Preference saved in localStorage
+- URL parameter support: `?lang=pt|fr|es`
+- Automatic browser language detection with fallback to English
 
 ## 📁 Project Structure
 
 ```
 raphaelguerra.com/
-├── index.html              # Main HTML file
+├── index.html                 # Main HTML file
 ├── assets/
-│   ├── js/
-│   │   ├── translations.js      # All language translations
-│   │   └── language-switcher.js # Language switching functionality
-│   └── css/                     # CSS files
+│   ├── css/
+│   │   └── main.css          # Styles
+│   └── js/
+│       ├── i18n.js           # i18n manager (loads /locales/*.json)
+│       ├── language-switcher.js
+│       └── main.js           # UI behavior
+├── locales/                  # JSON translations
+│   ├── en.json
+│   ├── pt.json
+│   ├── fr.json
+│   └── es.json
+├── CNAME                     # Custom domain (GitHub Pages)
 └── README.md
 ```
 
 ## 🚀 Getting Started
 
-1. **Clone the repository**
-2. **Open `index.html`** in a web browser
-3. **Test language switching** by clicking EN/PT/FR/ES in the navigation
+1. Clone the repository
+2. Serve locally with a static server (needed for JSON fetch):
+   - Python: `python3 -m http.server 5173`
+   - Node: `npx http-server -p 5173`
+3. Open `http://localhost:5173/`
+4. Test language switching via the dropdown or `?lang=pt|fr|es`
 
 ## 🎨 Customization
 
-- **Colors**: Modify CSS variables in the `<style>` section
-- **Content**: Update translations in `assets/js/translations.js`
-- **Layout**: Edit the HTML structure in `index.html`
-- **Functionality**: Modify `assets/js/language-switcher.js`
+- **Content**: Update text in `locales/*.json` (add `meta-description` for SEO)
+- **Layout**: Edit `index.html`
+- **Styles**: Edit `assets/css/main.css`
+- **Behavior**: Update `assets/js/*.js`
 
 ---
 
