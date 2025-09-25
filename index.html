@@ -197,7 +197,18 @@
                     <div class="md:col-span-2">
                         <div class="relative w-full max-w-xs mx-auto">
                             <div class="absolute inset-0 bg-green-500 rounded-lg transform -rotate-6"></div>
-                            <img src="https://media.licdn.com/dms/image/v2/D4E03AQHGD3WKWKYLww/profile-displayphoto-shrink_800_800/B4EZb5NU__HQAg-/0/1747937743479?e=1758153600&v=beta&t=24g8PHncheR5e5nsUdsJSGCLj4oi501Px_ACAUeSSvk" alt="Raphael Guerra" class="relative w-full rounded-lg shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/400x400/0a192f/e6f1ff?text=Image+Not+Found';">
+                            <picture class="relative block">
+                                <!-- Prefer local optimized assets -->
+                                <img 
+                                  src="assets/images/raphael-400.jpg" 
+                                  srcset="assets/images/raphael-400.jpg 400w, assets/images/raphael-800.jpg 800w"
+                                  sizes="(max-width: 480px) 320px, 400px"
+                                  alt="Raphael Guerra"
+                                  width="400" height="400"
+                                  loading="lazy" decoding="async"
+                                  class="relative w-full rounded-lg shadow-xl"
+                                  onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src='https://github.com/RaphaelGuerra.png?size=400';}else{this.onerror=null;this.src='https://placehold.co/400x400/0a192f/e6f1ff?text=Image+Not+Found';}">
+                            </picture>
                         </div>
                     </div>
                 </div>
