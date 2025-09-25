@@ -65,6 +65,10 @@
   ,
   "meta-description": "Personal website of Raphael Guerra, an IT Consultant at Deloitte. Explore experience, projects, and an AI assistant."
   ,
+  "code-label": "Code",
+  "live-label": "Live",
+  "tech-stack-label": "Tech Stack:",
+  
   "ai-suggested-label": "Try asking:",
   "prompt-posmatch": "What is POSMatch and why did I build it?",
   "prompt-converter": "How does the audio converter balance quality vs. size?",
