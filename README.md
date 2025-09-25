@@ -1,59 +1,34 @@
-# Raphael Guerra - Personal Website
+# Raphael Guerra — Personal Website
 
-A modern, responsive personal website showcasing Raphael Guerra's professional experience, projects, and skills. Features a multi-language system supporting English, Portuguese, French, and Spanish.
+Clean, responsive personal website that presents my work, selected projects, and ways to reach me. Built as a lightweight static site with multi‑language support (EN, PT, ES, FR).
 
-## 🌐 Multi-Language Support
+This is a portfolio project focused on clarity and performance. It highlights functionality and content over framework complexity.
 
-The website supports four languages:
-- **English (EN)** - Default language
-- **Portuguese (PT)** - Português
-- **French (FR)** - Français  
-- **Spanish (ES)** - Español
+## What It Does
+- Introduces who I am and how I work
+- Highlights selected projects with links to code and live demos
+- Multi‑language UI with instant switching and saved preference
+- Contact and social links (email, LinkedIn, etc.)
+- Lightweight offline support (basic PWA behavior)
 
-### Language Switching
-- Use the dropdown selector in the header
-- Preference saved in localStorage
-- URL parameter support: `?lang=pt|fr|es`
-- Automatic browser language detection with fallback to English
+## Highlights
+- Fast, accessible, mobile‑first design
+- Simple client‑side i18n (JSON locales + language switcher)
+- SEO‑friendly metadata and clean structure
 
-## 📁 Project Structure
+## Run Locally
+Serve statically to allow loading JSON locale files:
 
-```
-raphaelguerra.com/
-├── index.html                 # Main HTML file
-├── assets/
-│   ├── css/
-│   │   └── main.css          # Styles
-│   └── js/
-│       ├── i18n.js           # i18n manager (loads /locales/*.json)
-│       ├── language-switcher.js
-│       └── main.js           # UI behavior
-├── locales/                  # JSON translations
-│   ├── en.json
-│   ├── pt.json
-│   ├── fr.json
-│   └── es.json
-├── CNAME                     # Custom domain (GitHub Pages)
-└── README.md
+```bash
+python3 -m http.server 5173
+# or
+npx http-server -p 5173
+# then open http://localhost:5173
 ```
 
-## 🚀 Getting Started
+## Status & Learnings
+- Functional personal site showcasing portfolio and content
+- Learnings: pragmatic i18n, simple PWA, content‑first design
 
-1. Clone the repository
-2. Serve locally with a static server (needed for JSON fetch):
-   - Python: `python3 -m http.server 5173`
-   - Node: `npx http-server -p 5173`
-3. Open `http://localhost:5173/`
-4. Test language switching via the dropdown or `?lang=pt|fr|es`
-
-## 🎨 Customization
-
-- **Content**: Update text in `locales/*.json` (add `meta-description` for SEO)
-- **Layout**: Edit `index.html`
-- **Styles**: Edit `assets/css/main.css`
-- **Behavior**: Update `assets/js/*.js`
-
----
-
-**Built with**: HTML5, CSS3, JavaScript, Tailwind CSS  
-**Maintained by**: Raphael Guerra 
+## License
+Personal portfolio website — source available for reference.
