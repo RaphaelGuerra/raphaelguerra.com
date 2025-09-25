@@ -31,4 +31,4 @@ npx http-server -p 5173
 - Learnings: pragmatic i18n, simple PWA, content‑first design
 
 ## License
-Personal portfolio website — source available for reference.
+All rights reserved. Personal portfolio project — not for production use.
