@@ -1,5 +1,7 @@
 # Raphael Guerra — Personal Website
 
+Live: https://raphaelguerra.com
+
 Clean, responsive personal website that presents my work, selected projects, and ways to reach me. Built as a lightweight static site with multi‑language support (EN, PT, ES, FR).
 
 This is a portfolio project focused on clarity and performance. It highlights functionality and content over framework complexity.
