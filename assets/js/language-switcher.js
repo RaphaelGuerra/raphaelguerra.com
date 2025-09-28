@@ -24,6 +24,8 @@ class LanguageSwitcher {
 
         this.createLanguageSwitcher();
         this.bindEvents();
+        this.bindGlobalLanguageLinks();
+        this.ensureMobileSelector();
         this.isInitialized = true;
     }
 
@@ -31,24 +33,20 @@ class LanguageSwitcher {
      * Create the language switcher HTML
      */
     createLanguageSwitcher() {
-        // Find existing language selector elements to replace
-        const existingSelectors = document.querySelectorAll('.desktop-lang-selector, .mobile-lang-selector');
-        
-        existingSelectors.forEach(selector => {
-            const parent = selector.parentElement;
+        // Replace only desktop selector with dropdown; keep mobile inline links intact
+        const desktopSelector = document.querySelector('.desktop-lang-selector');
+        if (desktopSelector) {
+            const parent = desktopSelector.parentElement;
             const newSwitcher = this.createSwitcherHTML();
-            
-            // Replace the old selector with the new one
-            parent.replaceChild(newSwitcher, selector);
-        });
+            parent.replaceChild(newSwitcher, desktopSelector);
+            return;
+        }
 
-        // If no existing selectors found, add to header
-        if (existingSelectors.length === 0) {
-            const header = document.querySelector('header nav');
-            if (header) {
-                const newSwitcher = this.createSwitcherHTML();
-                header.insertBefore(newSwitcher, header.firstChild);
-            }
+        // If no desktop selector found, add to desktop header
+        const header = document.querySelector('header nav');
+        if (header) {
+            const newSwitcher = this.createSwitcherHTML();
+            header.insertBefore(newSwitcher, header.firstChild);
         }
     }
 
@@ -179,6 +177,67 @@ class LanguageSwitcher {
             } else {
                 option.classList.remove('active');
             }
+        });
+
+        // Update mobile inline selector active state
+        document.querySelectorAll('.mobile-lang-selector [data-lang]').forEach(el => {
+            el.classList.toggle('active', el.getAttribute('data-lang') === currentLang);
+        });
+    }
+
+    /**
+     * Bind global language link handlers (for mobile inline links)
+     */
+    bindGlobalLanguageLinks() {
+        document.addEventListener('click', (e) => {
+            // Let dropdown handle its own events
+            if (e.target.closest('.language-dropdown')) return;
+            const target = e.target.closest('[data-lang]');
+            if (!target) return;
+            const lang = target.getAttribute('data-lang');
+            if (!lang) return;
+            e.preventDefault();
+            this.changeLanguage(lang);
+
+            // Close mobile menu if selection came from inside it
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuBtn = document.getElementById('menu-btn');
+            if (mobileMenu && mobileMenu.contains(target)) {
+                mobileMenu.classList.add('hidden');
+                menuBtn?.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    /**
+     * Ensure a mobile language selector exists
+     */
+    ensureMobileSelector() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (!mobileMenu) return;
+        let mobileSelector = mobileMenu.querySelector('.mobile-lang-selector');
+        if (!mobileSelector) {
+            const divider = document.createElement('div');
+            divider.className = 'border-t border-slate-700 my-2';
+
+            mobileSelector = document.createElement('div');
+            mobileSelector.className = 'flex justify-center space-x-4 py-2 text-slate-400 mobile-lang-selector';
+            ['en','pt','fr','es'].forEach(l => {
+                const a = document.createElement('a');
+                a.href = '#';
+                a.setAttribute('data-lang', l);
+                a.textContent = l.toUpperCase();
+                a.className = 'hover:text-white transition-colors';
+                mobileSelector.appendChild(a);
+            });
+            mobileMenu.appendChild(divider);
+            mobileMenu.appendChild(mobileSelector);
+        }
+
+        // Sync active state
+        const currentLang = window.i18n?.getCurrentLanguage?.() || 'en';
+        mobileMenu.querySelectorAll('.mobile-lang-selector [data-lang]').forEach(el => {
+            el.classList.toggle('active', el.getAttribute('data-lang') === currentLang);
         });
     }
 }
