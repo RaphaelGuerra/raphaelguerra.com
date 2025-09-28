@@ -146,4 +146,33 @@ body {
         right: 0;
         min-width: 7rem;
     }
-} 
+}
+
+/* --- Mobile Nav Fallback & UX --- */
+@media (max-width: 767.98px) {
+  /* Hide desktop nav if Tailwind classes aren't applied yet */
+  header nav[aria-label="Main"] {
+    display: none !important;
+  }
+  /* Ensure hamburger is visible */
+  #menu-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Make mobile menu overlay clickable and scrollable */
+  #mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 80vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 9999;
+  }
+  /* Improve tap behavior */
+  #mobile-menu a {
+    touch-action: manipulation;
+  }
+}

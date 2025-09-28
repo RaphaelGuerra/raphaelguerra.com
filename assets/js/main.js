@@ -40,7 +40,13 @@ class MainApp {
             menuLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
+                    menuBtn.setAttribute('aria-expanded', 'false');
                 });
+            });
+
+            // Prevent outside-click handler from firing when interacting inside the menu
+            mobileMenu.addEventListener('click', (e) => {
+                e.stopPropagation();
             });
 
             // Close menu when clicking outside
