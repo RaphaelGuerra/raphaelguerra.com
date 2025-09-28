@@ -189,6 +189,7 @@ class LanguageSwitcher {
      * Bind global language link handlers (for mobile inline links)
      */
     bindGlobalLanguageLinks() {
+        // Capture clicks anywhere on the document (fallback)
         document.addEventListener('click', (e) => {
             // Let dropdown handle its own events
             if (e.target.closest('.language-dropdown')) return;
@@ -207,6 +208,21 @@ class LanguageSwitcher {
                 menuBtn?.setAttribute('aria-expanded', 'false');
             }
         });
+
+        // Explicitly bind inside the mobile menu to avoid bubbling issues
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', (e) => {
+                const target = e.target.closest('[data-lang]');
+                if (!target) return;
+                const lang = target.getAttribute('data-lang');
+                if (!lang) return;
+                e.preventDefault();
+                this.changeLanguage(lang);
+                mobileMenu.classList.add('hidden');
+                document.getElementById('menu-btn')?.setAttribute('aria-expanded', 'false');
+            });
+        }
     }
 
     /**
