@@ -9,7 +9,7 @@ Last updated: 2025-11-29
 - [Tech Stack](#tech-stack)
 - [Local Dev](#local-dev)
 - [Deploy](#deploy)
-- [Status & License](#status-license)
+- [Status & License](#status--license)
 <!-- TOC end -->
 
 ## Overview
