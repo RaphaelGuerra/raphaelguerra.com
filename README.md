@@ -15,16 +15,20 @@ Last updated: 2025-11-29
 <!-- TOC end -->
 
 ## Overview
+
 - Static personal website with localized content (`/locales`).
 - Plain HTML, CSS, and a bit of vanilla JavaScript.
-- Includes an `_headers` file for static hosting tweaks (e.g., security headers).
+- Includes an `_headers` file for static hosting tweaks (e.g., security
+  headers).
 
 ## Tech Stack
+
 - Static HTML/CSS
 - Vanilla JavaScript
 - JSON-based i18n (`/locales/*.json`)
 
 ## Local Dev
+
 Prerequisites: any static file server
 
 Option A (Python):
@@ -43,8 +47,10 @@ npx serve . -l 5173
 ```
 
 ## Deploy
+
 - Host on any static provider (e.g., GitHub Pages, Netlify, Vercel static).
 - `_headers` is compatible with Netlify-style header configuration.
 
 ## Status & License
+
 - Personal site; content and assets © Raphael Guerra.
