@@ -15,7 +15,6 @@ Last updated: 2025-11-30
 [![Lint](https://github.com/RaphaelGuerra/raphaelguerra.com/actions/workflows/lint.yml/badge.svg)](https://github.com/RaphaelGuerra/raphaelguerra.com/actions/workflows/lint.yml)
 [![Security](https://github.com/RaphaelGuerra/raphaelguerra.com/actions/workflows/security.yml/badge.svg)](https://github.com/RaphaelGuerra/raphaelguerra.com/actions/workflows/security.yml)
 
-
 ## Overview
 
 - Static personal website with localized content (`/locales`).
