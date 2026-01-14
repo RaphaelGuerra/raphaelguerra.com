@@ -1,0 +1,13 @@
+{
+  "name": "raphaelguerra.com",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind.input.css -o assets/css/tailwind.css --minify",
+    "build:hash": "node scripts/hash-assets.mjs",
+    "build": "npm run build:css && npm run build:hash",
+    "dev:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind.input.css -o assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
