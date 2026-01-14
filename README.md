@@ -47,6 +47,13 @@ npx serve . -l 5173
 # open http://localhost:5173
 ```
 
+Optional (Tailwind build + asset hashes):
+
+```bash
+npm install
+npm run build
+```
+
 ## Deploy
 
 - Host on any static provider (e.g., GitHub Pages, Netlify, Vercel static).
