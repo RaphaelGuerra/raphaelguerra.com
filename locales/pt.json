@@ -61,6 +61,9 @@
   "contact-title": "Entre em Contato",
   "contact-description": "Sempre estou aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte de uma visão ambiciosa. Seja qual for sua pergunta ou se você só quer dizer olá, minha caixa de entrada está sempre aberta. Farei o possível por responder!",
   "contact-cta": "Diga Olá",
+  "contact-copy": "Copiar email",
+  "contact-copied": "Email copiado.",
+  "contact-copy-failed": "Não foi possível copiar o email.",
   "footer-designed": "Desenhado e Construído por Raphael Guerra",
   "footer-inspired": "Inspirado pelo trabalho da Phaelix AI."
   ,

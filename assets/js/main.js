@@ -18,6 +18,7 @@ class MainApp {
         this.initializeSmoothScrolling();
         this.initializeScrollEffects();
         this.initializeContactForm();
+        this.initializeCopyEmail();
         
         this.isInitialized = true;
     }
@@ -124,6 +125,65 @@ class MainApp {
                 this.handleContactForm(contactForm);
             });
         }
+    }
+
+    /**
+     * Initialize copy-to-clipboard for email CTA
+     */
+    initializeCopyEmail() {
+        const copyButton = document.querySelector('[data-copy-email]');
+        if (!copyButton) return;
+
+        copyButton.addEventListener('click', async () => {
+            const email = copyButton.getAttribute('data-copy-email');
+            if (!email) return;
+
+            const copiedMessage = window.i18n?.t('contact-copied') || 'Email copied to clipboard.';
+            const errorMessage = window.i18n?.t('contact-copy-failed') || 'Unable to copy email.';
+
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(email);
+                    this.showNotification(copiedMessage, 'success');
+                    return;
+                }
+
+                if (this.fallbackCopyEmail(email)) {
+                    this.showNotification(copiedMessage, 'success');
+                } else {
+                    this.showNotification(errorMessage, 'error');
+                }
+            } catch (error) {
+                if (this.fallbackCopyEmail(email)) {
+                    this.showNotification(copiedMessage, 'success');
+                } else {
+                    this.showNotification(errorMessage, 'error');
+                }
+            }
+        });
+    }
+
+    /**
+     * Fallback copy method for older browsers
+     */
+    fallbackCopyEmail(email) {
+        const input = document.createElement('input');
+        input.value = email;
+        input.setAttribute('readonly', '');
+        input.style.position = 'absolute';
+        input.style.left = '-9999px';
+        document.body.appendChild(input);
+        input.select();
+
+        let success = false;
+        try {
+            success = document.execCommand('copy');
+        } catch (error) {
+            success = false;
+        }
+
+        document.body.removeChild(input);
+        return success;
     }
 
     /**
