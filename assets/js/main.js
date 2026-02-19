@@ -19,6 +19,7 @@ class MainApp {
         this.initializeScrollEffects();
         this.initializeContactForm();
         this.initializeCopyEmail();
+        this.initializeProjectSorting();
         
         this.isInitialized = true;
     }
@@ -161,6 +162,65 @@ class MainApp {
                 }
             }
         });
+    }
+
+    /**
+     * Sort project cards by creation date (newest first)
+     */
+    initializeProjectSorting() {
+        const projectSection = document.getElementById('projects');
+        if (!projectSection) return;
+
+        const projectGrid = projectSection.querySelector('.grid');
+        if (!projectGrid) return;
+
+        const projectCards = Array.from(projectGrid.querySelectorAll(':scope > .gradient-border'));
+        if (projectCards.length === 0) return;
+
+        const createdAtByProjectKey = {
+            'project-ez-match-title': '2026-02-19T16:03:08Z',
+            'project-ez-order-title': '2026-02-07T12:54:53Z',
+            'project-stellar-title': '2026-01-22T02:11:23Z',
+            'project-eco-game-title': '2026-01-21T18:12:14Z',
+            'project-pos-title': '2025-09-21T23:32:39Z',
+            'project-weight-title': '2025-09-05T15:27:43Z',
+            'project-next-image-title': '2025-08-28T20:32:43Z',
+            'project-ledger-title': '2025-08-27T21:14:39Z',
+            'project-vison-title': '2025-08-27T14:43:52Z',
+            'project-converter-title': '2025-08-26T19:04:15Z',
+            'project-txtrefine-title': '2025-08-23T21:09:55Z',
+            'project-transcriber-title': '2025-08-23T19:35:46Z',
+            'project-eco-explorer-title': '2025-06-30T13:15:43Z',
+            'project-eco-website-title': '2025-06-29T13:39:57Z',
+        };
+
+        const cardIndexByNode = new Map(projectCards.map((card, index) => [card, index]));
+        const getCreatedAt = (card) => {
+            const titleNode = card.querySelector('h4[data-translate]');
+            const projectKey = titleNode?.getAttribute('data-translate');
+            if (!projectKey) return null;
+
+            const createdAt = createdAtByProjectKey[projectKey];
+            if (!createdAt) return null;
+
+            const timestamp = Date.parse(createdAt);
+            return Number.isNaN(timestamp) ? null : timestamp;
+        };
+
+        const sortedCards = [...projectCards].sort((a, b) => {
+            const dateA = getCreatedAt(a);
+            const dateB = getCreatedAt(b);
+
+            if (dateA === null && dateB === null) {
+                return (cardIndexByNode.get(a) ?? 0) - (cardIndexByNode.get(b) ?? 0);
+            }
+            if (dateA === null) return 1;
+            if (dateB === null) return -1;
+
+            return dateB - dateA;
+        });
+
+        sortedCards.forEach(card => projectGrid.appendChild(card));
     }
 
     /**
