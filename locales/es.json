@@ -63,6 +63,8 @@
   "project-stellar-description": "App de carta natal en PT con tarjetas del Big 3, aspectos, sinastría, tránsitos y progresiones.",
   "project-ez-order-title": "ez-order",
   "project-ez-order-description": "Flujo de pedidos rápido, con checkout de baja fricción y operación limpia.",
+  "project-ez-match-title": "ez-match",
+  "project-ez-match-description": "App de conciliación operativa para matching semanal, excepciones y exportaciones.",
   "project-career-chatbot-title": "Chatbot de Carrera",
   "project-career-chatbot-description": "Un chatbot de orientación de carrera alimentado por IA que ayuda a usuarios a explorar caminos de carrera, proporciona consejos de búsqueda de empleo y ofrece recomendaciones de carrera personalizadas basadas en habilidades e intereses.",
   "tech-stack": "Stack Tecnológica: HTML, CSS, JavaScript",
