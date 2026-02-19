@@ -25,7 +25,7 @@
     <!-- Standardized i18n System -->
     <script src="assets/js/i18n.js?v=22c66e57" defer></script>
     <script src="assets/js/language-switcher.js?v=27dbadc6" defer></script>
-    <script src="assets/js/main.js?v=f3a6eca6" defer></script>
+    <script src="assets/js/main.js?v=846ab1a1" defer></script>
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/main.css?v=8fcf37d5">
@@ -265,28 +265,106 @@
 
                 <!-- Project Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Cash Ledger (Live + Code) -->
+                    <!-- Project Card 9: ez-match -->
                     <div class="gradient-border">
                         <div class="flex flex-col h-full">
                             <div class="flex-grow">
                                 <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M6 6h12M6 14h12M6 18h12"></path></svg>
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h10M4 18h8"></path></svg>
                                     <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/ledger" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                        <a href="https://github.com/RaphaelGuerra/ez-match" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                             <span class="text-sm font-medium" data-translate="code-label">Code</span>
                                         </a>
-                                        <a href="https://vison.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                        <a href="https://ez-match.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                                             <span class="text-sm font-medium" data-translate="live-label">Live</span>
                                         </a>
                                     </div>
                                 </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-ledger-title">Cash Ledger</h4>
-                                <p class="text-slate-400" data-translate="project-ledger-description">Privacy‑first ledger assisting SMB back office workflows.</p>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-ez-match-title">ez-match</h4>
+                                <p class="text-slate-400" data-translate="project-ez-match-description">Operations-focused reconciliation app for weekly matching, exceptions, and exports.</p>
                             </div>
                             <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> React, Vite</p>
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Next.js, TypeScript, SQL, Cloudflare</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 8: ez-order -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h12M3 17h10"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/ez-order" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
+                                        </a>
+                                        <a href="https://ez-order.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                            <span class="text-sm font-medium" data-translate="live-label">Live</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-ez-order-title">ez-order</h4>
+                                <p class="text-slate-400" data-translate="project-ez-order-description">Fast ordering flow built for low-friction checkout and clean operations.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> TypeScript, React, Vite</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 7: Stellar -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l2.09 6.26L20.5 9.3l-5 3.9L16.18 20 12 16.9 7.82 20l.68-6.8-5-3.9 6.41-1.04L12 2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.5 12.5l5-1.5M9.5 15.5l3.5 1"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/Stellar" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
+                                        </a>
+                                        <a href="https://stellar.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                            <span class="text-sm font-medium" data-translate="live-label">Live</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-stellar-title">Stellar</h4>
+                                <p class="text-slate-400" data-translate="project-stellar-description">PT birth-chart app with Big 3 cards, aspects, synastry, transits, and progressions.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> React, TypeScript, Vite</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6: Eco Game -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3l2.5 7.5L22 13l-7.5 2.5L12 23l-2.5-7.5L2 13l7.5-2.5L12 3z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6M10 9.5h4M10 16.5h4"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/eco-game" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
+                                        </a>
+                                        <a href="https://game.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                            <span class="text-sm font-medium" data-translate="live-label">Live</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-eco-game-title">Eco Game</h4>
+                                <p class="text-slate-400" data-translate="project-eco-game-description">Duolingo-style eco resort adventure with XP, streaks, and wildlife discovery.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> React, TypeScript, Vite, Tailwind, Zustand, Framer Motion</p>
                             </div>
                         </div>
                     </div>
@@ -343,28 +421,50 @@
                         </div>
                     </div>
                     
-                    <!-- Project Card 1: Phaelix AI -->
+                    <!-- Project Card 9: Next Image Studio (Labs) -->
                     <div class="gradient-border">
                         <div class="flex flex-col h-full">
                             <div class="flex-grow">
                                 <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
                                     <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/Phaelix-AI-Website" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                        <a href="https://github.com/RaphaelGuerra/next-image-studio" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                             <span class="text-sm font-medium" data-translate="code-label">Code</span>
                                         </a>
-                                        <a href="https://phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-next-image-title">Next Image Studio (Labs)</h4>
+                                <p class="text-slate-400" data-translate="project-next-image-description">Experiments in image workflows with Next.js.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Next.js, React, Tailwind</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cash Ledger (Live + Code) -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M6 6h12M6 14h12M6 18h12"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/ledger" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
+                                        </a>
+                                        <a href="https://vison.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                                             <span class="text-sm font-medium" data-translate="live-label">Live</span>
                                         </a>
                                     </div>
                                 </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-phaelix-title">Phaelix AI Website</h4>
-                                <p class="text-slate-400" data-translate="project-phaelix-description">A professional, modern website for an AI consultancy, demonstrating skills in creating strategic and ambitious online presences for businesses.</p>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-ledger-title">Cash Ledger</h4>
+                                <p class="text-slate-400" data-translate="project-ledger-description">Privacy‑first ledger assisting SMB back office workflows.</p>
                             </div>
                             <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> HTML, CSS, JavaScript</p>
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> React, Vite</p>
                             </div>
                         </div>
                     </div>
@@ -391,6 +491,74 @@
                             </div>
                             <div class="mt-4 pt-4 border-t border-slate-800">
                                 <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 10: M4A → MP3 Converter -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-2v13"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/converter" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-converter-title">M4A → MP3 Converter</h4>
+                                <p class="text-slate-400" data-translate="project-converter-description">Python/FFmpeg converter with 3‑tier quality control.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Python, FFmpeg</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 12: txtRefine -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4H8a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V6a2 2 0 00-2-2z"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/txtRefine" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-txtrefine-title">txtRefine</h4>
+                                <p class="text-slate-400" data-translate="project-txtrefine-description">Cleans and normalizes Portuguese philosophy terms.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Python</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                <!-- Project Card 11: Transcriber (CLI) -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V5l12 2v12"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/transcriber" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-transcriber-title">Transcriber (CLI)</h4>
+                                <p class="text-slate-400" data-translate="project-transcriber-description">Audio/video transcription CLI with selectable models and daemon mode.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Python, FFmpeg</p>
                             </div>
                         </div>
                     </div>
@@ -447,6 +615,32 @@
                         </div>
                     </div>
 
+                    <!-- Project Card 1: Phaelix AI -->
+                    <div class="gradient-border">
+                        <div class="flex flex-col h-full">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-center mb-4">
+                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                    <div class="flex space-x-3">
+                                        <a href="https://github.com/RaphaelGuerra/Phaelix-AI-Website" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
+                                        </a>
+                                        <a href="https://phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                            <span class="text-sm font-medium" data-translate="live-label">Live</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-phaelix-title">Phaelix AI Website</h4>
+                                <p class="text-slate-400" data-translate="project-phaelix-description">A professional, modern website for an AI consultancy, demonstrating skills in creating strategic and ambitious online presences for businesses.</p>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-slate-800">
+                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Project Card 5: Career Chatbot -->
                     <div class="gradient-border">
                         <div class="flex flex-col h-full">
@@ -473,201 +667,7 @@
                         </div>
                     </div>
 
-                    <!-- Project Card 6: Eco Game -->
-                    <div class="gradient-border">
-                        <div class="flex flex-col h-full">
-                            <div class="flex-grow">
-                                <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3l2.5 7.5L22 13l-7.5 2.5L12 23l-2.5-7.5L2 13l7.5-2.5L12 3z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6M10 9.5h4M10 16.5h4"></path></svg>
-                                    <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/eco-game" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
-                                        </a>
-                                        <a href="https://game.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                            <span class="text-sm font-medium" data-translate="live-label">Live</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-eco-game-title">Eco Game</h4>
-                                <p class="text-slate-400" data-translate="project-eco-game-description">Duolingo-style eco resort adventure with XP, streaks, and wildlife discovery.</p>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> React, TypeScript, Vite, Tailwind, Zustand, Framer Motion</p>
-                            </div>
-                        </div>
                     </div>
-
-                    <!-- Project Card 7: Stellar -->
-                    <div class="gradient-border">
-                        <div class="flex flex-col h-full">
-                            <div class="flex-grow">
-                                <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l2.09 6.26L20.5 9.3l-5 3.9L16.18 20 12 16.9 7.82 20l.68-6.8-5-3.9 6.41-1.04L12 2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.5 12.5l5-1.5M9.5 15.5l3.5 1"></path></svg>
-                                    <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/Stellar" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
-                                        </a>
-                                        <a href="https://stellar.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                            <span class="text-sm font-medium" data-translate="live-label">Live</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-stellar-title">Stellar</h4>
-                                <p class="text-slate-400" data-translate="project-stellar-description">PT birth-chart app with Big 3 cards, aspects, synastry, transits, and progressions.</p>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> React, TypeScript, Vite</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 8: ez-order -->
-                    <div class="gradient-border">
-                        <div class="flex flex-col h-full">
-                            <div class="flex-grow">
-                                <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h12M3 17h10"></path></svg>
-                                    <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/ez-order" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
-                                        </a>
-                                        <a href="https://ez-order.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                            <span class="text-sm font-medium" data-translate="live-label">Live</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-ez-order-title">ez-order</h4>
-                                <p class="text-slate-400" data-translate="project-ez-order-description">Fast ordering flow built for low-friction checkout and clean operations.</p>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> TypeScript, React, Vite</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 9: ez-match -->
-                    <div class="gradient-border">
-                        <div class="flex flex-col h-full">
-                            <div class="flex-grow">
-                                <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h10M4 18h8"></path></svg>
-                                    <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/ez-match" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
-                                        </a>
-                                        <a href="https://ez-match.phaelix.com/" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                            <span class="text-sm font-medium" data-translate="live-label">Live</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-ez-match-title">ez-match</h4>
-                                <p class="text-slate-400" data-translate="project-ez-match-description">Operations-focused reconciliation app for weekly matching, exceptions, and exports.</p>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Next.js, TypeScript, SQL, Cloudflare</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 9: Next Image Studio (Labs) -->
-                    <div class="gradient-border">
-                        <div class="flex flex-col h-full">
-                            <div class="flex-grow">
-                                <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                    <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/next-image-studio" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-next-image-title">Next Image Studio (Labs)</h4>
-                                <p class="text-slate-400" data-translate="project-next-image-description">Experiments in image workflows with Next.js.</p>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Next.js, React, Tailwind</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 10: M4A → MP3 Converter -->
-                    <div class="gradient-border">
-                        <div class="flex flex-col h-full">
-                            <div class="flex-grow">
-                                <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-2v13"></path></svg>
-                                    <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/converter" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-converter-title">M4A → MP3 Converter</h4>
-                                <p class="text-slate-400" data-translate="project-converter-description">Python/FFmpeg converter with 3‑tier quality control.</p>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Python, FFmpeg</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 11: Transcriber (CLI) -->
-                    <div class="gradient-border">
-                        <div class="flex flex-col h-full">
-                            <div class="flex-grow">
-                                <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V5l12 2v12"></path></svg>
-                                    <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/transcriber" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-transcriber-title">Transcriber (CLI)</h4>
-                                <p class="text-slate-400" data-translate="project-transcriber-description">Audio/video transcription CLI with selectable models and daemon mode.</p>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Python, FFmpeg</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 12: txtRefine -->
-                    <div class="gradient-border">
-                        <div class="flex flex-col h-full">
-                            <div class="flex-grow">
-                                <div class="flex justify-between items-center mb-4">
-                                    <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4H8a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V6a2 2 0 00-2-2z"></path></svg>
-                                    <div class="flex space-x-3">
-                                        <a href="https://github.com/RaphaelGuerra/txtRefine" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-green-400 px-3 py-2 rounded-lg transition-all duration-300 flex items-center space-x-2">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                            <span class="text-sm font-medium" data-translate="code-label">Code</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4 class="text-xl font-bold text-white mb-2" data-translate="project-txtrefine-title">txtRefine</h4>
-                                <p class="text-slate-400" data-translate="project-txtrefine-description">Cleans and normalizes Portuguese philosophy terms.</p>
-                            </div>
-                            <div class="mt-4 pt-4 border-t border-slate-800">
-                                <p class="text-sm text-slate-500"><span data-translate="tech-stack-label">Tech Stack:</span> Python</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
-                </div>
             </div>
         </section>
 
