@@ -6,7 +6,6 @@
   "nav-projects": "Projets",
   "nav-contact": "Contact",
   "hero-greeting": "Bonjour, je m'appelle",
-  "hero-title": "Raphael Guerra.",
   "hero-subtitle": "Je construis des solutions pour l'ère numérique.",
   "hero-description": "Je suis Consultant basé à Ottawa, spécialisé dans les solutions Oracle NetSuite ERP cloud. Je suis passionné par l'implémentation de systèmes ERP sur mesure pour optimiser les flux de travail, résoudre des défis complexes et livrer des résultats mesurables pour les clients chez",
   "hero-cta": "Découvrez mon travail !",
@@ -20,17 +19,14 @@
   "about-technologies": "Voici quelques technologies avec lesquelles j'ai travaillé récemment :",
   "experience-title": "Où J'ai Travaillé",
   "experience-deloitte-title": "Consultant",
-  "experience-deloitte-company": "@ Deloitte",
   "experience-deloitte-period": "Octobre 2024 — Présent",
   "experience-deloitte-bullet-1": "Spécialisé dans les solutions Oracle NetSuite ERP cloud, implémentant des systèmes sur mesure pour optimiser les flux de travail et résoudre des défis complexes.",
   "experience-deloitte-bullet-2": "Auparavant servi comme Développeur SAP, créant des solutions basées sur la base de données pour améliorer les processus d'entreprise.",
   "experience-innovapost-title": "Développeur SAP & TI Ops",
-  "experience-innovapost-company": "@ Innovapost",
   "experience-innovapost-period": "Avril 2022 — Avril 2024",
   "experience-innovapost-bullet-1": "Servi dans plusieurs rôles, y compris Développeur SAP, Spécialiste des Opérations TI et Développeur Web Frontend.",
   "experience-innovapost-bullet-2": "Amélioré la gestion des données et l'efficacité opérationnelle avec Microsoft SQL Server et développé des solutions web frontend.",
   "experience-vision-title": "Gestionnaire",
-  "experience-vision-company": "@ Vison Hotel",
   "experience-vision-period": "Juin 2008 — Décembre 2017",
   "experience-vision-bullet-1": "Géré les opérations hôtelières pendant près de 10 ans, développant un leadership fort, une expertise opérationnelle et une approche centrée sur le client.",
   "projects-title": "Projets Sélectionnés",
@@ -71,7 +67,6 @@
   "project-ez-match-description": "App de rapprochement opérationnel pour matching hebdomadaire, exceptions et exports.",
   "project-career-chatbot-title": "Chatbot de Carrière",
   "project-career-chatbot-description": "Un chatbot d'orientation de carrière alimenté par l'IA qui aide les utilisateurs à explorer des parcours de carrière, fournit des conseils de recherche d'emploi et offre des recommandations de carrière personnalisées basées sur les compétences et les intérêts.",
-  "tech-stack": "Stack Technologique : HTML, CSS, JavaScript",
   "contact-subtitle": "Qu'est-ce qui Suit ?",
   "contact-title": "Entrez en Contact",
   "contact-description": "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités de faire partie d'une vision ambitieuse. Que vous ayez une question ou que vous vouliez juste dire bonjour, ma boîte de réception est toujours ouverte. Je ferai de mon mieux pour vous répondre !",
@@ -80,14 +75,11 @@
   "contact-copied": "Email copié dans le presse-papiers.",
   "contact-copy-failed": "Impossible de copier l’email.",
   "footer-designed": "Conçu et Construit par Raphael Guerra",
-  "footer-inspired": "Inspiré par le travail de Phaelix AI."
-  ,
-  "meta-description": "Site personnel de Raphael Guerra, Consultant TI chez Deloitte. Découvrez expérience, projets et un assistant IA."
-  ,
+  "footer-inspired": "Inspiré par le travail de Phaelix AI.",
+  "meta-description": "Site personnel de Raphael Guerra, Consultant TI chez Deloitte. Découvrez expérience, projets et un assistant IA.",
   "code-label": "Code",
   "live-label": "En ligne",
   "tech-stack-label": "Stack Technique :",
-  
   "ai-suggested-label": "Essayez de demander :",
   "prompt-posmatch": "Qu’est‑ce que POSMatch et pourquoi l’ai‑je créé ?",
   "prompt-converter": "Comment le convertisseur audio équilibre qualité et taille ?",
@@ -96,4 +88,4 @@
   "now-posmatch": "Finition des exports POSMatch et des filtres par jour.",
   "now-converter": "Affinage du CLI du convertisseur pour vitesse et ergonomie.",
   "now-next-image": "Exploration des flux d’images avec Next.js."
-} 
+}

@@ -6,7 +6,6 @@
   "nav-projects": "Projects",
   "nav-contact": "Contact",
   "hero-greeting": "Hi, my name is",
-  "hero-title": "Raphael Guerra.",
   "hero-subtitle": "I build solutions for the digital age.",
   "hero-description": "I'm a Consultant based in Ottawa, specializing in Oracle NetSuite ERP cloud solutions. I'm passionate about implementing tailored ERP systems to optimize workflows, solve complex challenges, and deliver measurable results for clients at",
   "hero-cta": "Check out my work!",
@@ -20,17 +19,14 @@
   "about-technologies": "Here are a few technologies I've been working with recently:",
   "experience-title": "Where I've Worked",
   "experience-deloitte-title": "Consultant",
-  "experience-deloitte-company": "@ Deloitte",
   "experience-deloitte-period": "October 2024 — Present",
   "experience-deloitte-bullet-1": "Specializing in Oracle NetSuite ERP cloud solutions, implementing tailored systems to optimize workflows and solve complex challenges.",
   "experience-deloitte-bullet-2": "Previously served as an SAP Developer, creating database-driven solutions to improve enterprise processes.",
   "experience-innovapost-title": "SAP Developer & IT Ops",
-  "experience-innovapost-company": "@ Innovapost",
   "experience-innovapost-period": "April 2022 — April 2024",
   "experience-innovapost-bullet-1": "Served in multiple roles, including SAP Developer, IT Operations Specialist, and Frontend Web Developer.",
   "experience-innovapost-bullet-2": "Enhanced data management and operational efficiency with Microsoft SQL Server and developed front-end web solutions.",
   "experience-vision-title": "Manager",
-  "experience-vision-company": "@ Vison Hotel",
   "experience-vision-period": "June 2008 — December 2017",
   "experience-vision-bullet-1": "Managed hotel operations for nearly 10 years, developing strong leadership, operational expertise, and a customer-first approach.",
   "projects-title": "Selected Projects",
@@ -71,7 +67,6 @@
   "project-transcriber-description": "Audio/video transcription CLI with selectable models and daemon mode.",
   "project-txtrefine-title": "txtRefine",
   "project-txtrefine-description": "Cleans and normalizes Portuguese philosophy terms.",
-  "tech-stack": "Tech Stack: HTML, CSS, JavaScript",
   "contact-subtitle": "What's Next?",
   "contact-title": "Get In Touch",
   "contact-description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Whether you have a question or just want to say hi, my inbox is always open. I'll do my best to get back to you!",
@@ -80,14 +75,11 @@
   "contact-copied": "Email copied to clipboard.",
   "contact-copy-failed": "Unable to copy email.",
   "footer-designed": "Designed & Built by Raphael Guerra",
-  "footer-inspired": "Inspired by the work of Phaelix AI."
-  ,
-  "meta-description": "Personal website of Raphael Guerra, an IT Consultant at Deloitte. Explore experience, projects, and an AI assistant."
-  ,
+  "footer-inspired": "Inspired by the work of Phaelix AI.",
+  "meta-description": "Personal website of Raphael Guerra, an IT Consultant at Deloitte. Explore experience, projects, and an AI assistant.",
   "code-label": "Code",
   "live-label": "Live",
   "tech-stack-label": "Tech Stack:",
-  
   "ai-suggested-label": "Try asking:",
   "prompt-posmatch": "What is POSMatch and why did I build it?",
   "prompt-converter": "How does the audio converter balance quality vs. size?",
@@ -96,4 +88,4 @@
   "now-posmatch": "Polishing POSMatch exports and day filters.",
   "now-converter": "Refining the converter CLI for speed and ergonomics.",
   "now-next-image": "Exploring Next.js image workflows."
-} 
+}

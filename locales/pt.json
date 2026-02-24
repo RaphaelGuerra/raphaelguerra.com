@@ -6,7 +6,6 @@
   "nav-projects": "Projetos",
   "nav-contact": "Contato",
   "hero-greeting": "Olá, meu nome é",
-  "hero-title": "Raphael Guerra.",
   "hero-subtitle": "Eu construo soluções para a era digital.",
   "hero-description": "Sou Consultor baseado em Ottawa, especializado em soluções Oracle NetSuite ERP na nuvem. Sou apaixonado por implementar sistemas ERP personalizados para otimizar fluxos de trabalho, resolver desafios complexos e entregar resultados mensuráveis para clientes na",
   "hero-cta": "Confira meu trabalho!",
@@ -20,17 +19,14 @@
   "about-technologies": "Aqui estão algumas tecnologias com as quais tenho trabalhado recentemente:",
   "experience-title": "Onde Trabalhei",
   "experience-deloitte-title": "Consultor",
-  "experience-deloitte-company": "@ Deloitte",
   "experience-deloitte-period": "Outubro 2024 — Presente",
   "experience-deloitte-bullet-1": "Especializando-se em soluções Oracle NetSuite ERP na nuvem, implementando sistemas personalizados para otimizar fluxos de trabalho e resolver desafios complexos.",
   "experience-deloitte-bullet-2": "Anteriormente servi como Desenvolvedor SAP, criando soluções baseadas em banco de dados para melhorar processos empresariais.",
   "experience-innovapost-title": "Desenvolvedor SAP & TI Ops",
-  "experience-innovapost-company": "@ Innovapost",
   "experience-innovapost-period": "Abril 2022 — Abril 2024",
   "experience-innovapost-bullet-1": "Servi em múltiplas funções, incluindo Desenvolvedor SAP, Especialista em Operações de TI e Desenvolvedor Web Frontend.",
   "experience-innovapost-bullet-2": "Aprimorou gerenciamento de dados e eficiência operacional com Microsoft SQL Server e desenvolveu soluções web frontend.",
   "experience-vision-title": "Gerente",
-  "experience-vision-company": "@ Vison Hotel",
   "experience-vision-period": "Junho 2008 — Dezembro 2017",
   "experience-vision-bullet-1": "Gerenciou operações hoteleiras por quase 10 anos, desenvolvendo forte liderança, expertise operacional e abordagem focada no cliente.",
   "projects-title": "Projetos Selecionados",
@@ -71,7 +67,6 @@
   "project-ez-match-description": "App de conciliação operacional para matching semanal, exceções e exportações.",
   "project-career-chatbot-title": "Chatbot de Carreira",
   "project-career-chatbot-description": "Um chatbot de orientação de carreira alimentado por IA que ajuda usuários a explorar caminhos de carreira, fornece conselhos de busca de emprego e oferece recomendações de carreira personalizadas baseadas em habilidades e interesses.",
-  "tech-stack": "Stack Tecnológica: HTML, CSS, JavaScript",
   "contact-subtitle": "O que Vem Depois?",
   "contact-title": "Entre em Contato",
   "contact-description": "Sempre estou aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte de uma visão ambiciosa. Seja qual for sua pergunta ou se você só quer dizer olá, minha caixa de entrada está sempre aberta. Farei o possível por responder!",
@@ -80,14 +75,11 @@
   "contact-copied": "Email copiado.",
   "contact-copy-failed": "Não foi possível copiar o email.",
   "footer-designed": "Desenhado e Construído por Raphael Guerra",
-  "footer-inspired": "Inspirado pelo trabalho da Phaelix AI."
-  ,
-  "meta-description": "Website pessoal de Raphael Guerra, Consultor de TI na Deloitte. Explore experiência, projetos e um assistente de IA."
-  ,
+  "footer-inspired": "Inspirado pelo trabalho da Phaelix AI.",
+  "meta-description": "Website pessoal de Raphael Guerra, Consultor de TI na Deloitte. Explore experiência, projetos e um assistente de IA.",
   "code-label": "Código",
   "live-label": "Ao vivo",
   "tech-stack-label": "Stack Tecnológica:",
-  
   "ai-suggested-label": "Experimente perguntar:",
   "prompt-posmatch": "O que é o POSMatch e por que eu o criei?",
   "prompt-converter": "Como o conversor de áudio equilibra qualidade vs. tamanho?",
@@ -96,4 +88,4 @@
   "now-posmatch": "Aprimorando exportações e filtros por dia no POSMatch.",
   "now-converter": "Refinando o CLI do conversor para velocidade e ergonomia.",
   "now-next-image": "Explorando fluxos de imagem no Next.js."
-} 
+}

@@ -8,6 +8,7 @@ Last updated: 2026-02-24
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
 - [Local Dev](#local-dev)
+- [Quality Checks](#quality-checks)
 - [Deploy](#deploy)
 - [Status & License](#status--license)
 <!-- TOC end -->
@@ -57,8 +58,26 @@ npm run build
 Build details:
 
 - `npm run build:css`: compiles Tailwind output to `assets/css/tailwind.css`
-- `npm run build:hash`: runs `scripts/hash-assets.mjs` to hash CSS/JS assets and
-  update version query strings in `index.html`
+- `npm run build:hash`: runs `scripts/hash-assets.mjs` to hash CSS/JS assets
+  and update version query strings in `index.html`
+
+## Quality Checks
+
+```bash
+npm run check
+```
+
+- Validates locale key consistency across all files in `locales/`
+- Verifies all `data-translate` and runtime `window.i18n.t(...)` keys
+  exist in each locale
+- Verifies `index.html` asset version hashes match file contents
+
+```bash
+npm run check:build
+```
+
+- Rebuilds Tailwind + asset hashes and fails if committed build artifacts drift
+- Used in CI to guarantee reproducible static output
 
 ## Deploy
 

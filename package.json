@@ -4,6 +4,8 @@
   "scripts": {
     "build:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind.input.css -o assets/css/tailwind.css --minify",
     "build:hash": "node scripts/hash-assets.mjs",
+    "check": "node scripts/validate-site.mjs",
+    "check:build": "node scripts/check-build-artifacts.mjs",
     "build": "npm run build:css && npm run build:hash",
     "dev:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind.input.css -o assets/css/tailwind.css --watch"
   },

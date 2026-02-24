@@ -17,7 +17,6 @@ class MainApp {
         this.initializeMobileMenu();
         this.initializeSmoothScrolling();
         this.initializeScrollEffects();
-        this.initializeContactForm();
         this.initializeCopyEmail();
         
         this.isInitialized = true;
@@ -114,20 +113,6 @@ class MainApp {
     }
 
     /**
-     * Initialize contact form functionality
-     */
-    initializeContactForm() {
-        const contactForm = document.querySelector('#contact form');
-        
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                this.handleContactForm(contactForm);
-            });
-        }
-    }
-
-    /**
      * Initialize copy-to-clipboard for email CTA
      */
     initializeCopyEmail() {
@@ -184,36 +169,6 @@ class MainApp {
 
         document.body.removeChild(input);
         return success;
-    }
-
-    /**
-     * Handle contact form submission
-     */
-    async handleContactForm(form) {
-        const formData = new FormData(form);
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-
-        try {
-            // Show loading state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-
-            // Simulate form submission (replace with actual endpoint)
-            await new Promise(resolve => setTimeout(resolve, 2000));
-
-            // Show success message
-            this.showNotification('Message sent successfully!', 'success');
-            form.reset();
-
-        } catch (error) {
-            console.error('Form submission error:', error);
-            this.showNotification('Failed to send message. Please try again.', 'error');
-        } finally {
-            // Reset button state
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
-        }
     }
 
     /**

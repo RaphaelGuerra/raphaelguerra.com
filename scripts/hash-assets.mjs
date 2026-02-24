@@ -1,23 +1,16 @@
 import { createHash } from 'crypto'
 import { readFileSync, writeFileSync } from 'fs'
 import path from 'path'
+import { HASHED_ASSETS } from './hashed-assets.mjs'
 
 const root = process.cwd()
 const indexPath = path.join(root, 'index.html')
-
-const assets = [
-  'assets/css/tailwind.css',
-  'assets/css/main.css',
-  'assets/js/i18n.js',
-  'assets/js/language-switcher.js',
-  'assets/js/main.js',
-]
 
 const escapeForRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
 let html = readFileSync(indexPath, 'utf8')
 
-for (const asset of assets) {
+for (const asset of HASHED_ASSETS) {
   const assetPath = path.join(root, asset)
   const content = readFileSync(assetPath)
   const hash = createHash('sha256').update(content).digest('hex').slice(0, 8)

@@ -133,9 +133,9 @@ class I18nManager {
                 }
 
                 // Handle different element types
-                if (element.tagName === 'INPUT' && element.type === 'placeholder') {
+                if (element instanceof HTMLInputElement && element.hasAttribute('placeholder')) {
                     element.placeholder = translation;
-                } else if (element.tagName === 'META' && element.name === 'description') {
+                } else if (element instanceof HTMLMetaElement && element.name === 'description') {
                     element.content = translation;
                 } else {
                     element.textContent = translation;

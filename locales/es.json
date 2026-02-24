@@ -6,7 +6,6 @@
   "nav-projects": "Proyectos",
   "nav-contact": "Contacto",
   "hero-greeting": "Hola, mi nombre es",
-  "hero-title": "Raphael Guerra.",
   "hero-subtitle": "Construyo soluciones para la era digital.",
   "hero-description": "Soy Consultor basado en Ottawa, especializado en soluciones Oracle NetSuite ERP en la nube. Me apasiona implementar sistemas ERP personalizados para optimizar flujos de trabajo, resolver desafíos complejos y entregar resultados medibles para clientes en",
   "hero-cta": "¡Mira mi trabajo!",
@@ -20,17 +19,14 @@
   "about-technologies": "Aquí hay algunas tecnologías con las que he estado trabajando recientemente:",
   "experience-title": "Donde He Trabajado",
   "experience-deloitte-title": "Consultor",
-  "experience-deloitte-company": "@ Deloitte",
   "experience-deloitte-period": "Octubre 2024 — Presente",
   "experience-deloitte-bullet-1": "Especializándose en soluciones Oracle NetSuite ERP en la nube, implementando sistemas personalizados para optimizar flujos de trabajo y resolver desafíos complejos.",
   "experience-deloitte-bullet-2": "Anteriormente sirvió como Desarrollador SAP, creando soluciones basadas en base de datos para mejorar procesos empresariales.",
   "experience-innovapost-title": "Desarrollador SAP & TI Ops",
-  "experience-innovapost-company": "@ Innovapost",
   "experience-innovapost-period": "Abril 2022 — Abril 2024",
   "experience-innovapost-bullet-1": "Sirvió en múltiples roles, incluyendo Desarrollador SAP, Especialista en Operaciones de TI y Desarrollador Web Frontend.",
   "experience-innovapost-bullet-2": "Mejoró gestión de datos y eficiencia operacional con Microsoft SQL Server y desarrolló soluciones web frontend.",
   "experience-vision-title": "Gerente",
-  "experience-vision-company": "@ Vison Hotel",
   "experience-vision-period": "Junio 2008 — Diciembre 2017",
   "experience-vision-bullet-1": "Gestionó operaciones hoteleras por casi 10 años, desarrollando fuerte liderazgo, expertise operacional y enfoque centrado en el cliente.",
   "projects-title": "Proyectos Seleccionados",
@@ -71,7 +67,6 @@
   "project-ez-match-description": "App de conciliación operativa para matching semanal, excepciones y exportaciones.",
   "project-career-chatbot-title": "Chatbot de Carrera",
   "project-career-chatbot-description": "Un chatbot de orientación de carrera alimentado por IA que ayuda a usuarios a explorar caminos de carrera, proporciona consejos de búsqueda de empleo y ofrece recomendaciones de carrera personalizadas basadas en habilidades e intereses.",
-  "tech-stack": "Stack Tecnológica: HTML, CSS, JavaScript",
   "contact-subtitle": "¿Qué Sigue?",
   "contact-title": "Ponte en Contacto",
   "contact-description": "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ser parte de una visión ambiciosa. Ya sea que tengas una pregunta o solo quieras decir hola, mi bandeja de entrada siempre está abierta. ¡Haré lo posible por responderte!",
@@ -80,14 +75,11 @@
   "contact-copied": "Email copiado al portapapeles.",
   "contact-copy-failed": "No se pudo copiar el email.",
   "footer-designed": "Diseñado y Construido por Raphael Guerra",
-  "footer-inspired": "Inspirado por el trabajo de Phaelix AI."
-  ,
-  "meta-description": "Sitio web personal de Raphael Guerra, Consultor de TI en Deloitte. Explora experiencia, proyectos y un asistente de IA."
-  ,
+  "footer-inspired": "Inspirado por el trabajo de Phaelix AI.",
+  "meta-description": "Sitio web personal de Raphael Guerra, Consultor de TI en Deloitte. Explora experiencia, proyectos y un asistente de IA.",
   "code-label": "Código",
   "live-label": "En vivo",
   "tech-stack-label": "Stack Tecnológico:",
-  
   "ai-suggested-label": "Prueba preguntar:",
   "prompt-posmatch": "¿Qué es POSMatch y por qué lo construí?",
   "prompt-converter": "¿Cómo equilibra el convertidor de audio calidad vs. tamaño?",
@@ -96,4 +88,4 @@
   "now-posmatch": "Puliendo las exportaciones de POSMatch y los filtros por día.",
   "now-converter": "Afinando el CLI del convertidor para velocidad y ergonomía.",
   "now-next-image": "Explorando flujos de imágenes con Next.js."
-} 
+}
