@@ -55,6 +55,7 @@ npm run build
 ```
 
 Build details:
+
 - `npm run build:css`: compiles Tailwind output to `assets/css/tailwind.css`
 - `npm run build:hash`: runs `scripts/hash-assets.mjs` to hash CSS/JS assets and
   update version query strings in `index.html`
