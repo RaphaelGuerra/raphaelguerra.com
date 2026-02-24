@@ -1,6 +1,6 @@
 # raphaelguerra.com
 
-Last updated: 2026-02-21
+Last updated: 2026-02-24
 
 ## Table of Contents
 
@@ -53,6 +53,11 @@ Optional (Tailwind build + asset hashes):
 npm install
 npm run build
 ```
+
+Build details:
+- `npm run build:css`: compiles Tailwind output to `assets/css/tailwind.css`
+- `npm run build:hash`: runs `scripts/hash-assets.mjs` to hash CSS/JS assets and
+  update version query strings in `index.html`
 
 ## Deploy
 
