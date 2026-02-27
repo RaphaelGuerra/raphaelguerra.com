@@ -42,11 +42,12 @@ class LanguageSwitcher {
             return;
         }
 
-        // If no desktop selector found, add to desktop header
-        const header = document.querySelector('header nav');
+        // If no desktop selector found, add to end of desktop header nav
+        const header = document.querySelector('header nav[aria-label="Main navigation"]')
+            || document.querySelector('header nav');
         if (header) {
             const newSwitcher = this.createSwitcherHTML();
-            header.insertBefore(newSwitcher, header.firstChild);
+            header.appendChild(newSwitcher);
         }
     }
 
@@ -238,7 +239,7 @@ class LanguageSwitcher {
 
             mobileSelector = document.createElement('div');
             mobileSelector.className = 'flex justify-center space-x-4 py-2 text-slate-400 mobile-lang-selector';
-            ['en','pt','fr','es'].forEach(l => {
+            ['en','fr','es','pt'].forEach(l => {
                 const a = document.createElement('a');
                 a.href = '#';
                 a.setAttribute('data-lang', l);

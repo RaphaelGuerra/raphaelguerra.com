@@ -23,8 +23,8 @@
     <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.34.2/gradio.js"></script>
     
     <!-- Standardized i18n System -->
-    <script src="assets/js/i18n.js?v=99b66ee2" defer></script>
-    <script src="assets/js/language-switcher.js?v=27dbadc6" defer></script>
+    <script src="assets/js/i18n.js?v=a941ed01" defer></script>
+    <script src="assets/js/language-switcher.js?v=ffccaf34" defer></script>
     <script src="assets/js/main.js?v=a704bb43" defer></script>
 
     <!-- Custom Styles -->
@@ -41,17 +41,6 @@
                 Raphael Guerra<span class="gradient-text">.</span>
             </h1>
             <nav class="hidden md:flex space-x-6 items-center" role="navigation" aria-label="Main navigation">
-                <!-- Language Selector -->
-                <div class="flex space-x-2 text-sm text-slate-400 desktop-lang-selector">
-                    <a href="#" data-lang="en" class="font-bold text-white">EN</a>
-                    <span>/</span>
-                    <a href="#" data-lang="pt" class="hover:text-white transition-colors">PT</a>
-                    <span>/</span>
-                    <a href="#" data-lang="fr" class="hover:text-white transition-colors">FR</a>
-                    <span>/</span>
-                    <a href="#" data-lang="es" class="hover:text-white transition-colors">ES</a>
-                </div>
-                <div class="border-l border-slate-700 h-6"></div>
                 <!-- Navigation Links -->
                 <a href="#about" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-about">About</a>
                 <a href="#chatbot" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-ai-assistant">AI Assistant</a>
@@ -60,6 +49,17 @@
                 <a href="#contact" class="bg-green-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition-colors glow-effect" data-translate="nav-contact">
                     Contact
                 </a>
+                <div class="border-l border-slate-700 h-6"></div>
+                <!-- Language Selector -->
+                <div class="flex space-x-2 text-sm text-slate-400 desktop-lang-selector">
+                    <a href="#" data-lang="en" class="font-bold text-white">EN</a>
+                    <span>/</span>
+                    <a href="#" data-lang="fr" class="hover:text-white transition-colors">FR</a>
+                    <span>/</span>
+                    <a href="#" data-lang="es" class="hover:text-white transition-colors">ES</a>
+                    <span>/</span>
+                    <a href="#" data-lang="pt" class="hover:text-white transition-colors">PT</a>
+                </div>
             </nav>
             <button id="menu-btn" class="md:hidden focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -76,9 +76,9 @@
             <!-- Mobile Language Selector -->
             <div class="flex justify-center space-x-4 py-2 text-slate-400 mobile-lang-selector">
                 <a href="#" data-lang="en" class="hover:text-white transition-colors">EN</a>
-                <a href="#" data-lang="pt" class="hover:text-white transition-colors">PT</a>
                 <a href="#" data-lang="fr" class="hover:text-white transition-colors">FR</a>
                 <a href="#" data-lang="es" class="hover:text-white transition-colors">ES</a>
+                <a href="#" data-lang="pt" class="hover:text-white transition-colors">PT</a>
             </div>
         </nav>
     </header>
