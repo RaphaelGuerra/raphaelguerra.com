@@ -1,9 +1,26 @@
 /* Raphael Guerra - Main Styles */
 
+/* Shared layout offsets */
+:root {
+    --header-offset: 6rem;
+    --chatbot-height-mobile: 26rem;
+    --chatbot-height-desktop: 30rem;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-offset);
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #0a192f; /* A dark, professional navy blue */
     color: #e6f1ff;
+}
+
+main[id],
+section[id] {
+    scroll-margin-top: var(--header-offset);
 }
 
 /* Skip link for accessibility */
@@ -136,8 +153,93 @@ body {
     font-weight: 600;
 }
 
+/* Chatbot loading shell */
+.chatbot-shell {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: var(--chatbot-height-mobile);
+    height: var(--chatbot-height-mobile);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(51, 65, 85, 0.9);
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.chatbot-shell gradio-app {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0.5rem;
+    background: transparent;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.chatbot-shell.is-ready gradio-app {
+    opacity: 1;
+}
+
+.chatbot-loading {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background:
+        linear-gradient(135deg, rgba(0, 204, 102, 0.08), rgba(16, 185, 129, 0.05)),
+        rgba(15, 23, 42, 0.75);
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    pointer-events: none;
+}
+
+.chatbot-shell.is-ready .chatbot-loading {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.chatbot-loading-bar {
+    height: 0.85rem;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, rgba(30, 41, 59, 0.9), rgba(71, 85, 105, 0.45), rgba(30, 41, 59, 0.9));
+    background-size: 220% 100%;
+    animation: chatbot-shimmer 1.5s linear infinite;
+}
+
+.chatbot-loading-bar.short {
+    width: 52%;
+}
+
+.chatbot-loading-bar.medium {
+    width: 72%;
+}
+
+.chatbot-loading-bar.full {
+    width: 100%;
+}
+
+@keyframes chatbot-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -20% 0;
+    }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    :root {
+        --header-offset: 5.25rem;
+    }
+
     .language-switcher {
         margin-left: auto;
     }
@@ -151,6 +253,13 @@ body {
     .mobile-lang-selector a.active {
         color: #ffffff;
         font-weight: 600;
+    }
+}
+
+@media (min-width: 768px) {
+    .chatbot-shell {
+        min-height: var(--chatbot-height-desktop);
+        height: var(--chatbot-height-desktop);
     }
 }
 
@@ -181,4 +290,14 @@ body {
   #mobile-menu a {
     touch-action: manipulation;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .chatbot-loading-bar {
+        animation: none;
+    }
 }

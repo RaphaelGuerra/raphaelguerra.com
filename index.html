@@ -25,10 +25,10 @@
     <!-- Standardized i18n System -->
     <script src="assets/js/i18n.js?v=a941ed01" defer></script>
     <script src="assets/js/language-switcher.js?v=ffccaf34" defer></script>
-    <script src="assets/js/main.js?v=a704bb43" defer></script>
+    <script src="assets/js/main.js?v=11bcb02f" defer></script>
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="assets/css/main.css?v=8fcf37d5">
+    <link rel="stylesheet" href="assets/css/main.css?v=7bd56707">
 </head>
 <body class="antialiased">
 
@@ -130,8 +130,15 @@
                         <div>
                             <div class="relative">
                                 <div class="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg blur-xl"></div>
-                                <!-- PASTE YOUR CHATBOT EMBED CODE HERE -->
-                                <gradio-app src="https://phaelix-raphaelbot.hf.space" class="relative w-full h-96 min-h-[400px] rounded-lg border border-slate-700 bg-slate-900/50 backdrop-blur-sm"></gradio-app>
+                                <div class="chatbot-shell" data-chatbot-shell>
+                                    <div class="chatbot-loading" aria-hidden="true">
+                                        <div class="chatbot-loading-bar full"></div>
+                                        <div class="chatbot-loading-bar medium"></div>
+                                        <div class="chatbot-loading-bar short"></div>
+                                        <div class="chatbot-loading-bar full"></div>
+                                    </div>
+                                    <gradio-app src="https://phaelix-raphaelbot.hf.space" class="chatbot-embed"></gradio-app>
+                                </div>
                                 
                                 <div class="absolute -top-2 -right-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg flex items-center space-x-2">
                                     <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>

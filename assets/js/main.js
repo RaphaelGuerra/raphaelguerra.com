@@ -1,6 +1,6 @@
 /**
  * Main JavaScript functionality for Raphael Guerra's website
- * Handles mobile menu, smooth scrolling, and other interactive features
+ * Handles mobile menu and other interactive features
  */
 
 class MainApp {
@@ -15,7 +15,7 @@ class MainApp {
         if (this.isInitialized) return;
 
         this.initializeMobileMenu();
-        this.initializeSmoothScrolling();
+        this.initializeChatbotShell();
         this.initializeScrollEffects();
         this.initializeCopyEmail();
         
@@ -30,17 +30,21 @@ class MainApp {
         const mobileMenu = document.getElementById('mobile-menu');
 
         if (menuBtn && mobileMenu) {
+            const closeMobileMenu = () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            };
+
             menuBtn.addEventListener('click', () => {
                 const isHidden = mobileMenu.classList.toggle('hidden');
                 menuBtn.setAttribute('aria-expanded', String(!isHidden));
             });
 
-            // Close menu when a link is clicked
-            const menuLinks = mobileMenu.querySelectorAll('a');
-            menuLinks.forEach(link => {
+            // Close menu only for in-page section navigation links (not language links).
+            const sectionLinks = mobileMenu.querySelectorAll('a[href^="#"]:not([href="#"])');
+            sectionLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    menuBtn.setAttribute('aria-expanded', 'false');
+                    closeMobileMenu();
                 });
             });
 
@@ -52,39 +56,48 @@ class MainApp {
             // Close menu when clicking outside
             document.addEventListener('click', (e) => {
                 if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-                    mobileMenu.classList.add('hidden');
-                    menuBtn.setAttribute('aria-expanded', 'false');
+                    closeMobileMenu();
                 }
             });
         }
     }
 
     /**
-     * Initialize smooth scrolling for anchor links
+     * Stabilize chatbot area while external embed initializes
      */
-    initializeSmoothScrolling() {
-        const links = document.querySelectorAll('a[href^="#"]');
-        
-        links.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                
-                if (href === '#') return;
-                
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+    initializeChatbotShell() {
+        const chatbotShell = document.querySelector('[data-chatbot-shell]');
+        const chatbotEmbed = chatbotShell?.querySelector('gradio-app');
+        if (!chatbotShell || !chatbotEmbed) return;
+
+        let ready = false;
+        let fallbackTimer = null;
+        const observer = new MutationObserver(() => {
+            if (chatbotEmbed.querySelector('iframe')) {
+                markReady();
+            }
         });
+
+        const markReady = () => {
+            if (ready) return;
+            ready = true;
+            chatbotShell.classList.add('is-ready');
+            chatbotEmbed.setAttribute('aria-busy', 'false');
+            observer.disconnect();
+            if (fallbackTimer) {
+                clearTimeout(fallbackTimer);
+                fallbackTimer = null;
+            }
+        };
+
+        chatbotEmbed.setAttribute('aria-busy', 'true');
+        observer.observe(chatbotEmbed, { childList: true, subtree: true });
+
+        ['load', 'ready', 'gradio-ready', 'gradio-loaded'].forEach(eventName => {
+            chatbotEmbed.addEventListener(eventName, markReady, { once: true });
+        });
+
+        fallbackTimer = window.setTimeout(markReady, 6000);
     }
 
     /**
