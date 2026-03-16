@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant | Raphael Guerra</title>
+    <meta name="description" content="Chat with Raphael Guerra's AI assistant in a dedicated full-page experience.">
+    <link rel="canonical" href="https://raphaelguerra.com/chat.html">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#0a192f">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg?v=R1">
+    <link rel="preconnect" href="https://gradio.s3-us-west-2.amazonaws.com" crossorigin>
+    <link rel="preconnect" href="https://phaelix-raphaelbot.hf.space" crossorigin>
+
+    <link rel="stylesheet" href="assets/css/tailwind.css?v=c8588a58">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css?v=7bd56707">
+
+    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.34.2/gradio.js"></script>
+    <script src="assets/js/chat-page.js" defer></script>
+  </head>
+  <body class="antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold tracking-tighter text-white">
+          Raphael Guerra<span class="gradient-text">.</span>
+        </a>
+        <a
+          href="index.html"
+          class="bg-green-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
+        >
+          Back to Home
+        </a>
+      </div>
+    </header>
+
+    <main class="min-h-screen pt-28 pb-12 relative overflow-hidden">
+      <div
+        class="absolute inset-0"
+        style="
+          background-image:
+            radial-gradient(circle at 15% 85%, rgba(0, 204, 102, 0.1) 0%, transparent 40%),
+            radial-gradient(circle at 85% 15%, rgba(102, 255, 153, 0.1) 0%, transparent 40%);
+        "
+      ></div>
+
+      <section class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-10">
+          <p class="text-sm uppercase tracking-[0.35em] text-green-400 mb-3">Dedicated AI Chat</p>
+          <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Raphael Assistant</h1>
+          <p class="max-w-3xl mx-auto text-lg text-slate-300">
+            Ask about experience, projects, and current work in one place.
+          </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto gradient-border">
+          <div class="relative">
+            <div
+              class="chatbot-shell"
+              data-chatbot-shell
+              style="min-height: 70vh; height: min(70vh, 48rem);"
+            >
+              <div class="chatbot-loading" aria-hidden="true">
+                <div class="chatbot-loading-bar full"></div>
+                <div class="chatbot-loading-bar medium"></div>
+                <div class="chatbot-loading-bar short"></div>
+                <div class="chatbot-loading-bar full"></div>
+              </div>
+              <gradio-app src="https://phaelix-raphaelbot.hf.space" class="chatbot-embed"></gradio-app>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -19,13 +19,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     
-    <!-- Gradio Web Component (if you use a Gradio chatbot) -->
-    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.34.2/gradio.js"></script>
-    
     <!-- Standardized i18n System -->
     <script src="assets/js/i18n.js?v=a941ed01" defer></script>
     <script src="assets/js/language-switcher.js?v=ffccaf34" defer></script>
-    <script src="assets/js/main.js?v=11bcb02f" defer></script>
+    <script src="assets/js/main.js?v=06701e29" defer></script>
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/main.css?v=7bd56707">
@@ -43,7 +40,7 @@
             <nav class="hidden md:flex space-x-6 items-center" role="navigation" aria-label="Main navigation">
                 <!-- Navigation Links -->
                 <a href="#about" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-about">About</a>
-                <a href="#chatbot" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-ai-assistant">AI Assistant</a>
+                <a href="chat.html" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-ai-assistant">AI Assistant</a>
                 <a href="#experience" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-experience">Experience</a>
                 <a href="#projects" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-projects">Projects</a>
                 <a href="#contact" class="bg-green-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition-colors glow-effect" data-translate="nav-contact">
@@ -68,7 +65,7 @@
         <!-- Mobile Menu -->
         <nav id="mobile-menu" class="hidden md:hidden glass-effect" role="navigation" aria-label="Mobile navigation">
             <a href="#about" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-about">About</a>
-            <a href="#chatbot" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-ai-assistant">AI Assistant</a>
+            <a href="chat.html" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-ai-assistant">AI Assistant</a>
             <a href="#experience" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-experience">Experience</a>
             <a href="#projects" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-projects">Projects</a>
             <a href="#contact" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-contact">Contact</a>
@@ -125,45 +122,16 @@
                     </p>
                 </div>
                 
-                <div class="max-w-4xl mx-auto">
+                <div class="max-w-3xl mx-auto">
                     <div class="gradient-border">
-                        <div>
-                            <div class="relative">
-                                <div class="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg blur-xl"></div>
-                                <div class="chatbot-shell" data-chatbot-shell>
-                                    <div class="chatbot-loading" aria-hidden="true">
-                                        <div class="chatbot-loading-bar full"></div>
-                                        <div class="chatbot-loading-bar medium"></div>
-                                        <div class="chatbot-loading-bar short"></div>
-                                        <div class="chatbot-loading-bar full"></div>
-                                    </div>
-                                    <gradio-app src="https://phaelix-raphaelbot.hf.space" class="chatbot-embed"></gradio-app>
-                                </div>
-                                
-                                <div class="absolute -top-2 -right-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg flex items-center space-x-2">
-                                    <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                                    <span data-translate="ai-online">ONLINE</span>
-                                </div>
-                            </div>
+                        <div class="text-center">
+                            <p class="text-slate-300 text-lg mb-6">
+                                Open the assistant on a dedicated page for a faster, stable experience.
+                            </p>
+                            <a href="chat.html" class="inline-flex items-center justify-center bg-green-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-green-600 transition-colors">
+                                <span data-translate="nav-ai-assistant">AI Assistant</span>
+                            </a>
                         </div>
-                    </div>
-                    <!-- Suggested Prompts -->
-                    <div class="mt-6 text-slate-300">
-                        <div class="text-sm uppercase tracking-wide text-slate-400 mb-2" data-translate="ai-suggested-label">Try asking:</div>
-                        <ul class="grid grid-cols-1 md:grid-cols-3 gap-2 text-sm">
-                            <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                                <span data-translate="prompt-posmatch">What is POSMatch and why did I build it?</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                                <span data-translate="prompt-converter">How does the audio converter balance quality vs. size?</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                                <span data-translate="prompt-local-first">What’s my approach to local‑first apps?</span>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

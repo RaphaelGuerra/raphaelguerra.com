@@ -1,6 +1,6 @@
 /**
  * Main JavaScript functionality for Raphael Guerra's website
- * Handles mobile menu and other interactive features
+ * Handles homepage interactions
  */
 
 class MainApp {
@@ -15,7 +15,6 @@ class MainApp {
         if (this.isInitialized) return;
 
         this.initializeMobileMenu();
-        this.initializeChatbotShell();
         this.initializeScrollEffects();
         this.initializeCopyEmail();
         
@@ -40,9 +39,9 @@ class MainApp {
                 menuBtn.setAttribute('aria-expanded', String(!isHidden));
             });
 
-            // Close menu only for in-page section navigation links (not language links).
-            const sectionLinks = mobileMenu.querySelectorAll('a[href^="#"]:not([href="#"])');
-            sectionLinks.forEach(link => {
+            // Close menu for all navigation links except language links (href="#").
+            const navLinks = mobileMenu.querySelectorAll('a:not([href="#"])');
+            navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     closeMobileMenu();
                 });
@@ -60,44 +59,6 @@ class MainApp {
                 }
             });
         }
-    }
-
-    /**
-     * Stabilize chatbot area while external embed initializes
-     */
-    initializeChatbotShell() {
-        const chatbotShell = document.querySelector('[data-chatbot-shell]');
-        const chatbotEmbed = chatbotShell?.querySelector('gradio-app');
-        if (!chatbotShell || !chatbotEmbed) return;
-
-        let ready = false;
-        let fallbackTimer = null;
-        const observer = new MutationObserver(() => {
-            if (chatbotEmbed.querySelector('iframe')) {
-                markReady();
-            }
-        });
-
-        const markReady = () => {
-            if (ready) return;
-            ready = true;
-            chatbotShell.classList.add('is-ready');
-            chatbotEmbed.setAttribute('aria-busy', 'false');
-            observer.disconnect();
-            if (fallbackTimer) {
-                clearTimeout(fallbackTimer);
-                fallbackTimer = null;
-            }
-        };
-
-        chatbotEmbed.setAttribute('aria-busy', 'true');
-        observer.observe(chatbotEmbed, { childList: true, subtree: true });
-
-        ['load', 'ready', 'gradio-ready', 'gradio-loaded'].forEach(eventName => {
-            chatbotEmbed.addEventListener(eventName, markReady, { once: true });
-        });
-
-        fallbackTimer = window.setTimeout(markReady, 6000);
     }
 
     /**
