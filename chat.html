@@ -24,19 +24,19 @@
   <body class="antialiased">
     <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
       <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold tracking-tighter text-white">
+        <a href="/" class="text-2xl font-bold tracking-tighter text-white" aria-label="Go to homepage">
           Raphael Guerra<span class="gradient-text">.</span>
         </a>
         <a
-          href="index.html"
+          href="/"
           class="bg-green-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
         >
-          Back to Home
+          Home
         </a>
       </div>
     </header>
 
-    <main class="min-h-screen pt-28 pb-12 relative overflow-hidden">
+    <main class="min-h-screen pt-20 pb-4 md:pt-24 md:pb-8 relative overflow-hidden">
       <div
         class="absolute inset-0"
         style="
@@ -46,21 +46,20 @@
         "
       ></div>
 
-      <section class="container mx-auto px-6 relative z-10">
-        <div class="text-center mb-10">
-          <p class="text-sm uppercase tracking-[0.35em] text-green-400 mb-3">Dedicated AI Chat</p>
-          <h1 class="text-3xl md:text-5xl font-bold text-white mb-3">Raphael Assistant</h1>
-          <p class="max-w-3xl mx-auto text-lg text-slate-300">
-            Ask about experience, projects, and current work in one place.
+      <section class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-4 md:mb-8">
+          <h1 class="text-2xl md:text-4xl font-bold text-white mb-2">Raphael Assistant</h1>
+          <p class="max-w-2xl mx-auto text-base md:text-lg text-slate-300">
+            Ask about experience, projects, and current work.
           </p>
         </div>
 
-        <div class="max-w-5xl mx-auto gradient-border">
+        <div class="max-w-6xl mx-auto gradient-border">
           <div class="relative">
             <div
               class="chatbot-shell"
               data-chatbot-shell
-              style="min-height: 70vh; height: min(70vh, 48rem);"
+              style="min-height: 28rem; height: min(52rem, calc(100vh - 8.5rem)); height: min(52rem, calc(100svh - 8.5rem));"
             >
               <div class="chatbot-loading" aria-hidden="true">
                 <div class="chatbot-loading-bar full"></div>

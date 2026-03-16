@@ -34,15 +34,15 @@
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold tracking-tighter text-white">
+            <a href="/" class="text-2xl font-bold tracking-tighter text-white" aria-label="Go to homepage">
                 Raphael Guerra<span class="gradient-text">.</span>
-            </h1>
+            </a>
             <nav class="hidden md:flex space-x-6 items-center" role="navigation" aria-label="Main navigation">
                 <!-- Navigation Links -->
                 <a href="#about" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-about">About</a>
-                <a href="chat.html" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-ai-assistant">AI Assistant</a>
                 <a href="#experience" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-experience">Experience</a>
                 <a href="#projects" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-projects">Projects</a>
+                <a href="chat.html" class="text-slate-300 hover:text-green-400 transition-colors" data-translate="nav-ai-assistant">AI Assistant</a>
                 <a href="#contact" class="bg-green-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition-colors glow-effect" data-translate="nav-contact">
                     Contact
                 </a>
@@ -65,9 +65,9 @@
         <!-- Mobile Menu -->
         <nav id="mobile-menu" class="hidden md:hidden glass-effect" role="navigation" aria-label="Mobile navigation">
             <a href="#about" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-about">About</a>
-            <a href="chat.html" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-ai-assistant">AI Assistant</a>
             <a href="#experience" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-experience">Experience</a>
             <a href="#projects" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-projects">Projects</a>
+            <a href="chat.html" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-ai-assistant">AI Assistant</a>
             <a href="#contact" class="block py-2 px-6 text-slate-300 hover:bg-slate-800" data-translate="nav-contact">Contact</a>
             <div class="border-t border-slate-700 my-2"></div>
             <!-- Mobile Language Selector -->
@@ -80,7 +80,7 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" class="flex flex-col">
         <!-- Section 1: Hero -->
         <section id="hero" class="min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
             <div class="absolute inset-0" style="background-image: 
@@ -106,8 +106,8 @@
             </div>
         </section>
         
-        <!-- Section 2: AI Chatbot -->
-        <section id="chatbot" class="py-20 md:py-32 relative">
+        <!-- Section 5: AI Chatbot -->
+        <section id="chatbot" class="py-20 md:py-32 relative" style="order: 5;">
             <div class="absolute inset-0" style="background-image: 
                 radial-gradient(circle at 15% 85%, rgba(0, 204, 102, 0.1) 0%, transparent 40%),
                 radial-gradient(circle at 85% 15%, rgba(102, 255, 153, 0.1) 0%, transparent 40%);"></div>
@@ -115,7 +115,7 @@
             <div class="container mx-auto px-6 relative z-10">
                 <div class="text-center mb-16">
                     <p class="text-sm uppercase tracking-[0.35em] text-green-400 mb-3" data-translate="ai-badge">Now on version 2.0</p>
-                    <h2 class="text-3xl font-bold text-white mb-2"><span class="gradient-text">01.</span> <span data-translate="ai-title">Smarter. Faster. Always up to date.</span></h2>
+                    <h2 class="text-3xl font-bold text-white mb-2"><span class="gradient-text">04.</span> <span data-translate="ai-title">Smarter. Faster. Always up to date.</span></h2>
                     <div class="w-24 h-1 bg-green-500 mx-auto mb-4"></div>
                     <p class="max-w-3xl mx-auto text-xl text-slate-300 leading-relaxed" data-translate="ai-description">
                         Meet my upgraded AI assistant—ask about my experience, skills, and Raphael's latest projects all in one place.
@@ -137,10 +137,10 @@
             </div>
         </section>
 
-        <!-- Section 3: About Me -->
-        <section id="about" class="py-20 md:py-32">
+        <!-- Section 2: About Me -->
+        <section id="about" class="py-20 md:py-32" style="order: 2;">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-white mb-2 text-center"><span class="gradient-text">02.</span> <span data-translate="about-title">About Me</span></h2>
+                <h2 class="text-3xl font-bold text-white mb-2 text-center"><span class="gradient-text">01.</span> <span data-translate="about-title">About Me</span></h2>
                 <div class="w-24 h-1 bg-green-500 mx-auto mb-12"></div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
@@ -191,10 +191,10 @@
             </div>
         </section>
 
-        <!-- Section 4: Experience -->
-        <section id="experience" class="py-20 md:py-32">
+        <!-- Section 3: Experience -->
+        <section id="experience" class="py-20 md:py-32" style="order: 3;">
             <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="text-3xl font-bold text-white mb-2 text-center"><span class="gradient-text">03.</span> <span data-translate="experience-title">Where I've Worked</span></h2>
+                <h2 class="text-3xl font-bold text-white mb-2 text-center"><span class="gradient-text">02.</span> <span data-translate="experience-title">Where I've Worked</span></h2>
                 <div class="w-24 h-1 bg-green-500 mx-auto mb-12"></div>
                 
                 <div class="space-y-8">
@@ -232,10 +232,10 @@
         </section>
 
 
-        <!-- Section 5: Featured Projects -->
-        <section id="projects" class="py-20 md:py-32">
+        <!-- Section 4: Featured Projects -->
+        <section id="projects" class="py-20 md:py-32" style="order: 4;">
              <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-white mb-2 text-center"><span class="gradient-text">04.</span> <span data-translate="projects-title">Things I've Built</span></h2>
+                <h2 class="text-3xl font-bold text-white mb-2 text-center"><span class="gradient-text">03.</span> <span data-translate="projects-title">Things I've Built</span></h2>
                 <div class="w-24 h-1 bg-green-500 mx-auto mb-6"></div>
                 <p class="text-xs uppercase tracking-[0.2em] text-green-400 mb-6 text-center" data-translate="latest-releases-first">Latest Releases First</p>
 
@@ -728,7 +728,7 @@
         </section>
 
         <!-- Section 6: Contact -->
-        <section id="contact" class="py-20 md:py-32">
+        <section id="contact" class="py-20 md:py-32" style="order: 6;">
             <div class="container mx-auto px-6 text-center max-w-2xl">
                 <h2 class="text-2xl font-bold text-green-400 mb-2" data-translate="contact-subtitle">05. What's Next?</h2>
                 <h3 class="text-4xl md:text-5xl font-extrabold text-white mb-4" data-translate="contact-title">Get In Touch</h3>
